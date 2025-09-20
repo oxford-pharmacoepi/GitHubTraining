@@ -1,0 +1,42 @@
+project:
+  type: website
+  output-dir: _site
+
+date: today
+
+website:
+  title: "GitHub training"
+  open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
+  repo-url: https://github.com/oxford-pharmacoepi/GitHubTraining
+  repo-actions: [issue]
+  page-footer:
+    center: "Rendered on {{< meta date >}}"
+    left: "Copyright 2025, Oxinfer"
+    right:
+      - text: W
+        href: https://oxford-pharmacoepi.github.io/Oxinfer/
+      - href: https://github.com/oxford-pharmacoepi
+        icon: github
+      - href: https://www.youtube.com/@oxinfer
+        icon: youtube
+  navbar:
+    left:
+      - text: Let's get started
+        href: setup.qmd
+      - text: GitHub the basis
+        href: github_basis.qmd
+      - text: Practical Session
+        href: practical.qmd
+    right:
+      - text: W
+        href: https://oxford-pharmacoepi.github.io/Oxinfer/
+      - href: https://github.com/oxford-pharmacoepi
+        icon: github
+      - href: https://www.youtube.com/@oxinfer
+        icon: youtube
+
+format:
+  html:
+    toc: true
+    theme: cosmo
+    search: false

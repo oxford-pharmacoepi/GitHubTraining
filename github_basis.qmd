@@ -1,0 +1,36 @@
+---
+title: "GitHub Training"
+subtitle: "How does GitHub work?"
+format:
+  revealjs: 
+    theme: [simple, styleSS25.scss]
+    incremental: true   
+    slide-number: true
+    chalkboard: true
+    preview-links: auto
+    margin: 0.07
+    code-link: true
+    code-line-numbers: false
+    height: 900
+    width: 1600
+    footer: |
+      <div style="position: relative; width: 100%;">
+        <div style="text-align: center; font-weight: 500;">GitHub Training</div>
+        <div style="position: fixed; top: 20px; right: 20px;"><a href="index.qmd" style="text-decoration: none;">⬅ Back to Training website</a></div>
+      </div>
+execute:
+  echo: true
+  eval: true
+editor: visual
+---
+
+# GitHub Training {.title-slide}
+
+```{r, echo=FALSE}
+options(width = 130)
+```
+
+## What is GitHub?
+
+- .gitignore
+- merging conflicts
