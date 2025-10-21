@@ -2,7 +2,7 @@
 
 This website contains the content for the 'GitHub training' conducted as part of the *Health Data Sciences seminars sessions* on Friday 24th of October 2025.
 
--   [**Let's get started**](set up.qmd) contains the instructions to set up your environment so you can follow the session.
+-   [**Let's get started**](set_up.qmd) contains the instructions to set up your environment so you can follow the session.
 -   [**GitHub Training**](github_basis.qmd) contains the presentation that will be conducted during the training.
 -   [**Practical**](practical.qmd) contains the details of the practical session that will be conducted.
 
