@@ -1,2 +1,16 @@
 
 # Practical session
+
+- Do a first contribution:
+P1: add a readme
+P2: create a code to run
+P3: add concept sets
+P4: add the duckdb database
+
+- Add your name in the readme
+
+- Second contribution:
+P1: edit readme 1
+P2: edit readme 2
+P3: rename folder of concepts folder
+P4: concepts in json file to csv file
