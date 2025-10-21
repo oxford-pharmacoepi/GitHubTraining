@@ -1,10 +1,10 @@
-# Real World Evidence Summer School 2025
+# GitHub training
 
-This website is used for the **Analytical track** practical sessions.
+This website contains the content for the 'GitHub training' conducted as part of the *Health Data Sciences seminars sessions* on Friday 24th of October 2025.
 
--   [**Program**](program.qmd) contains the schedule of the practical sessions.
--   [**Presentations**](Presentations/index.qmd) contains the presentations that will be conducted during the Summer School.
--   [**Practical**](practical.qmd) contains the details of the final practical session conducted during the Summer School.
+-   [**Let's get started**](set up.qmd) contains the instructions to set up your environment so you can follow the session.
+-   [**GitHub Training**](github_basis.qmd) contains the presentation that will be conducted during the training.
+-   [**Practical**](practical.qmd) contains the details of the practical session that will be conducted.
 
 <div style="text-align: center;">
   <img src="images/hds_logo.svg" width="150" />

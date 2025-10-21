@@ -32,5 +32,10 @@ options(width = 130)
 
 ## What is GitHub?
 
+- git
+- clone
 - .gitignore
 - merging conflicts
+- update from main
+- pull push
+- branches
