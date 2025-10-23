@@ -95,15 +95,15 @@ A **branch** is an independent line of development.
 
 . . .
 
-![](images/branch1.png){fig-align="center"}
+![](images/branch1.png){fig-align="center", height="25%"}
 
 . . .
 
-![](images/branch2.png){fig-align="center"}
+![](images/branch2.png){fig-align="center", height="25%"}
 
 . . .
 
-![](images/branch3.png){fig-align="center"}
+![](images/branch3.png){fig-align="center", height="25%"}
 
 ## Fork
 
