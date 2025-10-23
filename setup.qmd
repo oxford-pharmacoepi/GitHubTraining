@@ -5,9 +5,14 @@ To conduct this training you will need to install some tools:
 
   1. [Download and install R](https://cran.r-project.org)
   2. Download and install an Integrated Development Environment (IDE) in general we use [R studio](https://posit.co/download/rstudio-desktop/), but feel free to use the IDE that you prefer. Other interesting IDEs might be: [Positron](https://positron.posit.co) or [Visual Studio Code](https://code.visualstudio.com/Download).
-  3. Create a [GitHub account](https://github.com/signup) if you don't have one.
-  4. Ask to be added to the [oxford-pharmacoepi](https://github.com/oxford-pharmacoepi) GitHub organisation.
-  5. Download and install [GitHub Desktop](https://desktop.github.com/download/).
-  6. Log in to the GitHub Desktop with your GitHub account.
+  3. Make sure you have the required packages installed:
+```{r, eval=FALSE}
+install.packages("pak")
+pak::pkg_install(c("CDMConnector", "CodelistGenerator", "duckdb"))
+```
+  4. Create a [GitHub account](https://github.com/signup) if you don't have one.
+  5. Ask to be added to the [oxford-pharmacoepi](https://github.com/oxford-pharmacoepi) GitHub organisation.
+  6. Download and install [GitHub Desktop](https://desktop.github.com/download/).
+  7. Log in to the GitHub Desktop with your GitHub account.
   
 You are all set :)

@@ -1,6 +1,6 @@
 ---
 title: "GitHub Training"
-subtitle: "How does GitHub work?"
+subtitle: "An overview of GitHub and Codelists"
 format:
   revealjs: 
     theme: [simple, styleSS25.scss]
@@ -92,10 +92,22 @@ The **merge** operation integrates the changes from one branch into another. Whe
 
 ## Workflow
 
-- git
-- clone
-- .gitignore
-- merging conflicts
-- update from main
-- pull push
-- branches
+## update from main
+
+## .gitignore
+
+## Merging conflicts
+
+# Codelists and conceptSetExpressions
+
+## Codelist
+
+## conceptSetExpression
+
+## Export and Import
+
+## `json` and `csv`
+
+## From codelist to conceptSetExpression
+
+## From conceptSetExpression to codelist
