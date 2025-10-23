@@ -176,6 +176,11 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><a href="https://cran.r-project.org">Download and install R</a></li>
 <li>Download and install an Integrated Development Environment (IDE) in general we use <a href="https://posit.co/download/rstudio-desktop/">R studio</a>, but feel free to use the IDE that you prefer. Other interesting IDEs might be: <a href="https://positron.posit.co">Positron</a> or <a href="https://code.visualstudio.com/Download">Visual Studio Code</a>.</li>
+<li>Make sure you have the required packages installed:</li>
+</ol>
+<pre><code>install.packages("pak")
+pak::pkg_install(c("CDMConnector", "CodelistGenerator", "duckdb"))</code></pre>
+<ol start="4" type="1">
 <li>Create a <a href="https://github.com/signup">GitHub account</a> if you don’t have one.</li>
 <li>Ask to be added to the <a href="https://github.com/oxford-pharmacoepi">oxford-pharmacoepi</a> GitHub organisation.</li>
 <li>Download and install <a href="https://desktop.github.com/download/">GitHub Desktop</a>.</li>

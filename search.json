@@ -4,7 +4,7 @@
     "href": "github_basis.html#git-vs-github-vs-github-desktop",
     "title": "GitHub Training",
     "section": "Git vs GitHub vs GitHub Desktop",
-    "text": "Git vs GitHub vs GitHub Desktop\nGit is a distributed version control system that tracks changes in source code during software development and allows multiple developers to collaborate efficiently.\n\nGitHub is a web-based platform that provides hosting for Git repositories, along with collaborative features like issue tracking, pull requests, and project management.\n\n\nGitHub Desktop is a graphical user interface (GUI) application that simplifies the interaction with Git and GitHub, allowing users to perform common repository operations without using the command line."
+    "text": "Git vs GitHub vs GitHub Desktop\n\nGit is a distributed version control system that tracks changes in source code during software development and allows multiple developers to collaborate efficiently.\n\n\nGitHub is a web-based platform that provides hosting for Git repositories, along with collaborative features like issue tracking, pull requests, and project management.\n\n\nGitHub Desktop is a graphical user interface (GUI) application that simplifies the interaction with Git and GitHub, allowing users to perform common repository operations without using the command line."
   },
   {
     "objectID": "github_basis.html#repository-repo",
@@ -14,11 +14,39 @@
     "text": "Repository (Repo)\nA repository is essentially a project’s folder. It contains all the project files, including code, documentation, images, and, most importantly, the entire history of every change made to those files."
   },
   {
+    "objectID": "github_basis.html#explore-repository",
+    "href": "github_basis.html#explore-repository",
+    "title": "GitHub Training",
+    "section": "Explore repository",
+    "text": "Explore repository\nhttps://github.com/oxford-pharmacoepi/Tidy-R-programming-with-OMOP\n\nIt is nice to include it in any repository a README.md document to:\n\nSummarise the content of the repository.\nInstructions how to install your package, run your code or use your tool.\nStructure of the folders of the repository.\nHow to contribute, indicate people how to contribute to the project.\nLicense\nAcknowledgments\nContact\nCitation"
+  },
+  {
+    "objectID": "github_basis.html#formatting-.md-file",
+    "href": "github_basis.html#formatting-.md-file",
+    "title": "GitHub Training",
+    "section": "Formatting .md file",
+    "text": "Formatting .md file\nYou can usually format\n\n# to add titles.\n---- to add separator lines.\n- for bullet points.\n*text* for italic text.\n**text** for bold text."
+  },
+  {
     "objectID": "github_basis.html#clone",
     "href": "github_basis.html#clone",
     "title": "GitHub Training",
     "section": "Clone",
     "text": "Clone\nGet a copy of the repository onto your local machine or GitHub account."
+  },
+  {
+    "objectID": "github_basis.html#branch",
+    "href": "github_basis.html#branch",
+    "title": "GitHub Training",
+    "section": "Branch",
+    "text": "Branch\nA branch is an independent line of development.\n\nThe default and main line of development is typically called the main branch.\nBranches allow developers to work on new features or bug fixes in isolation without affecting the stable, main code.\n\n\n{fig-align=“center”, height=“25%”}\n\n\n{fig-align=“center”, height=“25%”}\n\n\n{fig-align=“center”, height=“25%”}"
+  },
+  {
+    "objectID": "github_basis.html#fork",
+    "href": "github_basis.html#fork",
+    "title": "GitHub Training",
+    "section": "Fork",
+    "text": "Fork\nA fork is a personal copy of another user’s repository. You can make changes to your copy without affecting the original. It’s often the first step in contributing to a project you don’t own."
   },
   {
     "objectID": "github_basis.html#commit",
@@ -35,20 +63,6 @@
     "text": "Push & Pull\nThese are the actions used to synchronize your local Git repository with the remote repository on GitHub:\n\nPush: To send your local commits from your computer to the remote repository on GitHub.\nPull: To fetch and download changes (commits) from the remote repository on GitHub to your local computer."
   },
   {
-    "objectID": "github_basis.html#branch",
-    "href": "github_basis.html#branch",
-    "title": "GitHub Training",
-    "section": "Branch",
-    "text": "Branch\nA branch is an independent line of development.\n\nThe default and main line of development is typically called the main branch.\nBranches allow developers to work on new features or bug fixes in isolation without affecting the stable, main code."
-  },
-  {
-    "objectID": "github_basis.html#fork",
-    "href": "github_basis.html#fork",
-    "title": "GitHub Training",
-    "section": "Fork",
-    "text": "Fork\nA fork is a personal copy of another user’s repository. You can make changes to your copy without affecting the original. It’s often the first step in contributing to a project you don’t own."
-  },
-  {
     "objectID": "github_basis.html#pull-request-pr",
     "href": "github_basis.html#pull-request-pr",
     "title": "GitHub Training",
@@ -63,10 +77,80 @@
     "text": "Merge\nThe merge operation integrates the changes from one branch into another. When a Pull Request is approved, the repository maintainer will merge the feature branch into the main branch."
   },
   {
+    "objectID": "github_basis.html#how-everything-works",
+    "href": "github_basis.html#how-everything-works",
+    "title": "GitHub Training",
+    "section": "How everything works",
+    "text": "How everything works\n\n\n\nCommand\nDescription\n\n\n\n\ngit init\nCreate a new local repository.\n\n\ngit clone &lt;url&gt;\nCopy a remote repository locally.\n\n\ngit remote add origin &lt;url&gt;\nAdd a new remote repository.\n\n\ngit status\nCheck status of changes and branch.\n\n\ngit add &lt;file&gt;\nStage specific file(s) for commit.\n\n\ngit commit -m \"message\"\nCommit staged changes.\n\n\ngit log\nView commit history.\n\n\ngit diff\nShow unstaged changes.\n\n\ngit branch &lt;name&gt;\nCreate a new branch.\n\n\ngit checkout &lt;branch&gt;\nSwitch to a branch.\n\n\ngit merge &lt;branch&gt;\nMerge another branch into the current one.\n\n\ngit fetch\nDownload updates from remote (no merge).\n\n\ngit pull\nFetch and merge changes from remote.\n\n\ngit push\nPush local commits to remote.\n\n\ngit revert &lt;commit&gt;\nRevert a specific commit with a new one."
+  },
+  {
     "objectID": "github_basis.html#workflow",
     "href": "github_basis.html#workflow",
     "title": "GitHub Training",
     "section": "Workflow",
-    "text": "Workflow\n\ngit\nclone\n.gitignore\nmerging conflicts\nupdate from main\npull push\nbranches"
+    "text": "Workflow"
+  },
+  {
+    "objectID": "github_basis.html#update-from-main",
+    "href": "github_basis.html#update-from-main",
+    "title": "GitHub Training",
+    "section": "Update from main",
+    "text": "Update from main"
+  },
+  {
+    "objectID": "github_basis.html#gitignore",
+    "href": "github_basis.html#gitignore",
+    "title": "GitHub Training",
+    "section": ".gitignore",
+    "text": ".gitignore"
+  },
+  {
+    "objectID": "github_basis.html#merging-conflicts",
+    "href": "github_basis.html#merging-conflicts",
+    "title": "GitHub Training",
+    "section": "Merging conflicts",
+    "text": "Merging conflicts"
+  },
+  {
+    "objectID": "github_basis.html#codelist",
+    "href": "github_basis.html#codelist",
+    "title": "GitHub Training",
+    "section": "Codelist",
+    "text": "Codelist"
+  },
+  {
+    "objectID": "github_basis.html#conceptsetexpression",
+    "href": "github_basis.html#conceptsetexpression",
+    "title": "GitHub Training",
+    "section": "conceptSetExpression",
+    "text": "conceptSetExpression"
+  },
+  {
+    "objectID": "github_basis.html#export-and-import",
+    "href": "github_basis.html#export-and-import",
+    "title": "GitHub Training",
+    "section": "Export and Import",
+    "text": "Export and Import"
+  },
+  {
+    "objectID": "github_basis.html#json-and-csv",
+    "href": "github_basis.html#json-and-csv",
+    "title": "GitHub Training",
+    "section": "json and csv",
+    "text": "json and csv"
+  },
+  {
+    "objectID": "github_basis.html#from-codelist-to-conceptsetexpression",
+    "href": "github_basis.html#from-codelist-to-conceptsetexpression",
+    "title": "GitHub Training",
+    "section": "From codelist to conceptSetExpression",
+    "text": "From codelist to conceptSetExpression"
+  },
+  {
+    "objectID": "github_basis.html#from-conceptsetexpression-to-codelist",
+    "href": "github_basis.html#from-conceptsetexpression-to-codelist",
+    "title": "GitHub Training",
+    "section": "From conceptSetExpression to codelist",
+    "text": "From conceptSetExpression to codelist"
   }
 ]

@@ -124,7 +124,7 @@
     }
   </style>
 <meta property="og:title" content="GitHub Training – GitHub training">
-<meta property="og:description" content="How does GitHub work?">
+<meta property="og:description" content="An overview of GitHub and Codelists">
 <meta property="og:site_name" content="GitHub training">
 </head>
 <body class="quarto-light">
@@ -133,28 +133,25 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">GitHub Training</h1>
-  <p class="subtitle">How does GitHub work?</p>
+  <p class="subtitle">An overview of GitHub and Codelists</p>
 
 <div class="quarto-title-authors">
 </div>
 
   <p class="date">2025-10-23</p>
 </section>
-<section>
-<section id="github-training" class="title-slide slide level1 center">
-<h1>GitHub Training</h1>
-
-</section>
 <section id="git-vs-github-vs-github-desktop" class="slide level2">
 <h2>Git vs GitHub vs GitHub Desktop</h2>
+<div class="fragment">
 <p><strong>Git</strong> is a distributed version control system that tracks changes in source code during software development and allows multiple developers to collaborate efficiently.</p>
+</div>
 <div class="fragment">
 <p><strong>GitHub</strong> is a web-based platform that provides hosting for Git repositories, along with collaborative features like issue tracking, pull requests, and project management.</p>
 </div>
 <div class="fragment">
 <p><strong>GitHub Desktop</strong> is a graphical user interface (GUI) application that simplifies the interaction with Git and GitHub, allowing users to perform common repository operations without using the command line.</p>
 </div>
-</section></section>
+</section>
 <section>
 <section id="core-concepts" class="title-slide slide level1 center">
 <h1>Core Concepts</h1>
@@ -163,10 +160,74 @@
 <section id="repository-repo" class="slide level2">
 <h2>Repository (Repo)</h2>
 <p>A repository is essentially a <strong>project’s folder</strong>. It contains all the project files, including code, documentation, images, and, most importantly, the <strong>entire history</strong> of every change made to those files.</p>
+
+<img data-src="images/repos.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="explore-repository" class="slide level2">
+<h2>Explore repository</h2>
+<p><a href="https://github.com/oxford-pharmacoepi/Tidy-R-programming-with-OMOP" class="uri">https://github.com/oxford-pharmacoepi/Tidy-R-programming-with-OMOP</a></p>
+<div class="fragment">
+<p>It is nice to include it in any repository a <code>README.md</code> document to:</p>
+<ul>
+<li class="fragment">Summarise the content of the repository.</li>
+<li class="fragment">Instructions how to install your package, run your code or use your tool.</li>
+<li class="fragment">Structure of the folders of the repository.</li>
+<li class="fragment">How to contribute, indicate people how to contribute to the project.</li>
+<li class="fragment">License</li>
+<li class="fragment">Acknowledgments</li>
+<li class="fragment">Contact</li>
+<li class="fragment">Citation</li>
+</ul>
+</div>
+</section>
+<section id="formatting-.md-file" class="slide level2">
+<h2>Formatting <code>.md</code> file</h2>
+<p>You can usually format</p>
+<ul>
+<li class="fragment"><code>#</code> to add titles.</li>
+<li class="fragment"><code>----</code> to add separator lines.</li>
+<li class="fragment"><code>-</code> for bullet points.</li>
+<li class="fragment"><code>*text*</code> for italic text.</li>
+<li class="fragment"><code>**text**</code> for bold text.</li>
+</ul>
 </section>
 <section id="clone" class="slide level2">
 <h2>Clone</h2>
 <p>Get a copy of the repository onto your local machine or GitHub account.</p>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clone.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clone2.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="branch" class="slide level2">
+<h2>Branch</h2>
+<p>A <strong>branch</strong> is an independent line of development.</p>
+<ul>
+<li class="fragment"><p>The default and main line of development is typically called the <strong>main</strong> branch.</p></li>
+<li class="fragment"><p>Branches allow developers to work on new features or bug fixes in <strong>isolation</strong> without affecting the stable, main code.</p></li>
+</ul>
+<div class="fragment">
+<p><img data-src="images/branch1.png">{fig-align=“center”, height=“25%”}</p>
+</div>
+<div class="fragment">
+<p><img data-src="images/branch2.png">{fig-align=“center”, height=“25%”}</p>
+</div>
+<div class="fragment">
+<p><img data-src="images/branch3.png">{fig-align=“center”, height=“25%”}</p>
+</div>
+</section>
+<section id="fork" class="slide level2">
+<h2>Fork</h2>
+<p>A <strong>fork</strong> is a personal copy of another user’s repository. You can make changes to your copy without affecting the original. It’s often the first step in contributing to a project you don’t own.</p>
 </section>
 <section id="commit" class="slide level2">
 <h2>Commit</h2>
@@ -184,18 +245,6 @@
 <li class="fragment"><p><strong>Pull:</strong> To <strong>fetch</strong> and <strong>download</strong> changes (commits) from the remote repository on GitHub to your local computer.</p></li>
 </ul>
 </section>
-<section id="branch" class="slide level2">
-<h2>Branch</h2>
-<p>A <strong>branch</strong> is an independent line of development.</p>
-<ul>
-<li class="fragment"><p>The default and main line of development is typically called the <strong>main</strong> branch.</p></li>
-<li class="fragment"><p>Branches allow developers to work on new features or bug fixes in <strong>isolation</strong> without affecting the stable, main code.</p></li>
-</ul>
-</section>
-<section id="fork" class="slide level2">
-<h2>Fork</h2>
-<p>A <strong>fork</strong> is a personal copy of another user’s repository. You can make changes to your copy without affecting the original. It’s often the first step in contributing to a project you don’t own.</p>
-</section>
 <section id="pull-request-pr" class="slide level2">
 <h2>Pull Request (PR)</h2>
 <p>A <strong>Pull Request</strong> is a mechanism for a developer to propose their changes (commits from a branch) to be <strong>merged</strong> into another branch (usually the main branch of the original project).</p>
@@ -207,17 +256,113 @@
 <h2>Merge</h2>
 <p>The <strong>merge</strong> operation integrates the changes from one branch into another. When a Pull Request is approved, the repository maintainer will <strong>merge</strong> the feature branch into the main branch.</p>
 </section>
+<section id="how-everything-works" class="slide level2">
+<h2>How everything works</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>git init</code></td>
+<td>Create a new local repository.</td>
+</tr>
+<tr class="even">
+<td><code>git clone &lt;url&gt;</code></td>
+<td>Copy a remote repository locally.</td>
+</tr>
+<tr class="odd">
+<td><code>git remote add origin &lt;url&gt;</code></td>
+<td>Add a new remote repository.</td>
+</tr>
+<tr class="even">
+<td><code>git status</code></td>
+<td>Check status of changes and branch.</td>
+</tr>
+<tr class="odd">
+<td><code>git add &lt;file&gt;</code></td>
+<td>Stage specific file(s) for commit.</td>
+</tr>
+<tr class="even">
+<td><code>git commit -m "message"</code></td>
+<td>Commit staged changes.</td>
+</tr>
+<tr class="odd">
+<td><code>git log</code></td>
+<td>View commit history.</td>
+</tr>
+<tr class="even">
+<td><code>git diff</code></td>
+<td>Show unstaged changes.</td>
+</tr>
+<tr class="odd">
+<td><code>git branch &lt;name&gt;</code></td>
+<td>Create a new branch.</td>
+</tr>
+<tr class="even">
+<td><code>git checkout &lt;branch&gt;</code></td>
+<td>Switch to a branch.</td>
+</tr>
+<tr class="odd">
+<td><code>git merge &lt;branch&gt;</code></td>
+<td>Merge another branch into the current one.</td>
+</tr>
+<tr class="even">
+<td><code>git fetch</code></td>
+<td>Download updates from remote (no merge).</td>
+</tr>
+<tr class="odd">
+<td><code>git pull</code></td>
+<td>Fetch and merge changes from remote.</td>
+</tr>
+<tr class="even">
+<td><code>git push</code></td>
+<td>Push local commits to remote.</td>
+</tr>
+<tr class="odd">
+<td><code>git revert &lt;commit&gt;</code></td>
+<td>Revert a specific commit with a new one.</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="workflow" class="slide level2">
 <h2>Workflow</h2>
-<ul>
-<li class="fragment">git</li>
-<li class="fragment">clone</li>
-<li class="fragment">.gitignore</li>
-<li class="fragment">merging conflicts</li>
-<li class="fragment">update from main</li>
-<li class="fragment">pull push</li>
-<li class="fragment">branches</li>
-</ul>
+</section>
+<section id="update-from-main" class="slide level2">
+<h2>Update from main</h2>
+</section>
+<section id="gitignore" class="slide level2">
+<h2>.gitignore</h2>
+</section>
+<section id="merging-conflicts" class="slide level2">
+<h2>Merging conflicts</h2>
+</section></section>
+<section>
+<section id="codelists-and-conceptsetexpressions" class="title-slide slide level1 center">
+<h1>Codelists and conceptSetExpressions</h1>
+
+</section>
+<section id="codelist" class="slide level2">
+<h2>Codelist</h2>
+</section>
+<section id="conceptsetexpression" class="slide level2">
+<h2>conceptSetExpression</h2>
+</section>
+<section id="export-and-import" class="slide level2">
+<h2>Export and Import</h2>
+</section>
+<section id="json-and-csv" class="slide level2">
+<h2><code>json</code> and <code>csv</code></h2>
+</section>
+<section id="from-codelist-to-conceptsetexpression" class="slide level2">
+<h2>From codelist to conceptSetExpression</h2>
+</section>
+<section id="from-conceptsetexpression-to-codelist" class="slide level2">
+<h2>From conceptSetExpression to codelist</h2>
 
 
 </section></section>
@@ -445,44 +590,6 @@ GitHub Training
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
