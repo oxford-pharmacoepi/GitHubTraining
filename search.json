@@ -39,14 +39,21 @@
     "href": "github_basis.html#branch",
     "title": "GitHub Training",
     "section": "Branch",
-    "text": "Branch\nA branch is an independent line of development.\n\nThe default and main line of development is typically called the main branch.\nBranches allow developers to work on new features or bug fixes in isolation without affecting the stable, main code.\n\n\n{fig-align=“center”, height=“25%”}\n\n\n{fig-align=“center”, height=“25%”}\n\n\n{fig-align=“center”, height=“25%”}"
+    "text": "Branch\nA branch is an independent line of development.\n\nThe default and main line of development is typically called the main branch.\nBranches allow developers to work on new features or bug fixes in isolation without affecting the stable, main code."
   },
   {
     "objectID": "github_basis.html#fork",
     "href": "github_basis.html#fork",
     "title": "GitHub Training",
     "section": "Fork",
-    "text": "Fork\nA fork is a personal copy of another user’s repository. You can make changes to your copy without affecting the original. It’s often the first step in contributing to a project you don’t own."
+    "text": "Fork\nA fork is a personal copy of another user’s repository. You can make changes to your copy without affecting the original. It’s often the first step in contributing to a project you don’t own.\n\nWe will see this in the practical."
+  },
+  {
+    "objectID": "github_basis.html#open-the-project-locally",
+    "href": "github_basis.html#open-the-project-locally",
+    "title": "GitHub Training",
+    "section": "Open the project locally",
+    "text": "Open the project locally"
   },
   {
     "objectID": "github_basis.html#commit",
@@ -56,11 +63,18 @@
     "text": "Commit\nA commit is a snapshot of your repository at a specific point in time. It’s the fundamental building block of Git’s history.\n\nEvery commit has a unique ID (SHA), an author, a timestamp, and a commit message that explains why the change was made.\nCommits are what you create locally with Git."
   },
   {
+    "objectID": "github_basis.html#create-a-new-file",
+    "href": "github_basis.html#create-a-new-file",
+    "title": "GitHub Training",
+    "section": "Create a new file",
+    "text": "Create a new file\n\nOpen the mds folder.\nFile &gt; New File &gt; Text File &gt; your_name.md\nAdd some content\nAdd a message in the commit box\nClick commit\nDon’t do anything else"
+  },
+  {
     "objectID": "github_basis.html#push-pull",
     "href": "github_basis.html#push-pull",
     "title": "GitHub Training",
     "section": "Push & Pull",
-    "text": "Push & Pull\nThese are the actions used to synchronize your local Git repository with the remote repository on GitHub:\n\nPush: To send your local commits from your computer to the remote repository on GitHub.\nPull: To fetch and download changes (commits) from the remote repository on GitHub to your local computer."
+    "text": "Push & Pull\nThese are the actions used to synchronise your local Git repository with the remote repository on GitHub:\n\nPush: To send your local commits from your computer to the remote repository on GitHub.\nPull: To fetch and download changes (commits) from the remote repository on GitHub to your local computer. (We will see it later)"
   },
   {
     "objectID": "github_basis.html#pull-request-pr",
@@ -75,6 +89,13 @@
     "title": "GitHub Training",
     "section": "Merge",
     "text": "Merge\nThe merge operation integrates the changes from one branch into another. When a Pull Request is approved, the repository maintainer will merge the feature branch into the main branch."
+  },
+  {
+    "objectID": "github_basis.html#pull",
+    "href": "github_basis.html#pull",
+    "title": "GitHub Training",
+    "section": "Pull",
+    "text": "Pull"
   },
   {
     "objectID": "github_basis.html#how-everything-works",
