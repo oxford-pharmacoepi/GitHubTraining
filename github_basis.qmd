@@ -81,6 +81,8 @@ You can usually format
 
 Get a copy of the repository onto your local machine or GitHub account.
 
+![](images/clone.png){fig-align="center"}
+
 ## Commit
 
 A **commit** is a snapshot of your repository at a specific point in time. It's the fundamental building block of Git's history.
