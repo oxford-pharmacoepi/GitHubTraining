@@ -287,6 +287,22 @@ An **issue** is a record used to track and manage tasks, bugs, or feature reques
 
 - **Type**: The type indicates the nature of the issue, such as a *bug*, *feature request*, or *task*.
 
+## Link an Pull Request to an issue
+
+You can use *'magical'* words to close an issue from a pull request:
+
+- close #12 / closes #12
+- resolve #12 / resolves #12
+- fix #12 / fixes #12
+
+. . .
+
+**Remember this as we will use it later!**
+
+. . .
+
+You can otherwise link issues manually using the *development* tab.
+
 ## Templates
 
 . . .
@@ -297,11 +313,129 @@ Templates can be used to create new repositories:
 
 # Codelists and conceptSetExpressions
 
+## Database
+
+For this practical we will use 
+
+## CodelistGenerator
+
+To deal with *codelist* and *concept_set_expression* objects we will use the **CodelistGenerator** package:
+
+```{r}
+library(CodelistGenerator)
+```
+
 ## Codelist
+
+. . .
+
+A codelist is a named list of codes to be used in a study you can create a simple codelist as:
+
+```{r}
+codes <- list(codelist_name = c(1L, 2L, 3L)) |>
+  newCodelist()
+codes
+```
+
+. . .
+
+A `codelist` object can contain multiple codelists:
+
+```{r}
+codes <- list(codelist_1 = c(1L, 2L, 3L), codelist_2 = c(4L, 5L)) |>
+  newCodelist()
+codes
+```
+
+## Codelist
+
+. . .
+
+You can create a codelist using drug ingredients like:
+
+```{r}
+codes <- getDrugIngredientCodes(cdm = cdm, name = "acetaminophen", routeCategory = "oral")
+codes
+```
+
+## Codelist
+
+. . .
+
+You can create a codelist from a text search:
+
+```{r}
+candidates <- getCandidateCodes(cdm = cdm, keywords = "covid")
+codes <- list(covid = candidates$concept_id) |>
+  newCodelist()
+codes
+```
+
+## Codelist
+
+As we have seen codelists are deterministic and do **not** depend on vocabularies, but they can be **long** and difficult to manage.
+
+## Export Codelist
+
+```{r, eval=FALSE}
+exportCodelist(x = codes, path = here(), type = "csv")
+exportCodelist(x = codes, path = here(), type = "json")
+```
+
+## Import a codelist in ATLAS
+
+Really?
+
+## Import a codelist
+
+```{r, eval=FALSE}
+codes <- importCodelist(path = here(), type = "csv")
+codes <- importCodelist(path = here(), type = "json")
+```
+
+. . .
+
+**If you want to be friends use `.csv`**
+
+## Your turn
+
+Go to the repository that we were working: <https://github.com/oxford-pharmacoepi/TestRepository>
+
+- Make sure you are in **your branch**
+
+- Make sure **your branch** is updated from main
+
+- Assign an issue (that starts with **CODELIST STEP 1**) to yourself
+
+- Create the codelist that you are asked to create
+
+- Save it in the codelist folder
+
+- Commit
+
+- Push
+
+- Open a Pull Request (link the Pull Request to the issue)
 
 ## conceptSetExpression
 
-## Export and Import
+A `concept_set_expression` is a named list that contains an expression:
+
+. . .
+
+**concept_id** + **logic** (*exclude* and *descendants*)
+
+## conceptSetExpression
+
+. . .
+
+We do not provide any function to create concept_set_expression, but they can easily be created as a list of tibbles.
+
+. . .
+
+```{r}
+
+```
 
 ## `json` and `csv`
 
