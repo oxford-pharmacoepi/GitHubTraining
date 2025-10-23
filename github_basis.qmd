@@ -93,6 +93,18 @@ A **branch** is an independent line of development.
 
 - Branches allow developers to work on new features or bug fixes in **isolation** without affecting the stable, main code.
 
+. . .
+
+![](images/branch1.png){fig-align="center"}
+
+. . .
+
+![](images/branch2.png){fig-align="center"}
+
+. . .
+
+![](images/branch3.png){fig-align="center"}
+
 ## Fork
 
 A **fork** is a personal copy of another user's repository. You can make changes to your copy without affecting the original. It's often the first step in contributing to a project you don't own.
