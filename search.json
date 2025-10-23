@@ -137,14 +137,14 @@
     "href": "github_basis.html#update-from-main-1",
     "title": "GitHub Training",
     "section": "Update from main",
-    "text": "Update from main"
+    "text": "Update from main\n\nChange to your_branch branch\nBranch &gt; Update from main\nPush"
   },
   {
     "objectID": "github_basis.html#gitignore",
     "href": "github_basis.html#gitignore",
     "title": "GitHub Training",
     "section": ".gitignore",
-    "text": ".gitignore"
+    "text": ".gitignore\n\nThe .gitignore file tells git which files or folders to skip when tracking changes. It prevents temporary, sensitive, or unnecessary files from being added to a repository. Common examples include log files, build artifacts, and environment files. This keeps the repo clean and focused on essential code and assets.\n\nYou can ignore a file if you include the name on it my_file.txt.\nYou can ignore a folder if you include on it folder/.\nYou can ignore files using patterns (e.g. this would ignore all .txt files *.txt)"
   },
   {
     "objectID": "github_basis.html#merging-conflicts",
@@ -152,6 +152,27 @@
     "title": "GitHub Training",
     "section": "Merging conflicts",
     "text": "Merging conflicts"
+  },
+  {
+    "objectID": "github_basis.html#merging-conflicts-1",
+    "href": "github_basis.html#merging-conflicts-1",
+    "title": "GitHub Training",
+    "section": "Merging conflicts",
+    "text": "Merging conflicts"
+  },
+  {
+    "objectID": "github_basis.html#issues",
+    "href": "github_basis.html#issues",
+    "title": "GitHub Training",
+    "section": "Issues",
+    "text": "Issues"
+  },
+  {
+    "objectID": "github_basis.html#discussion",
+    "href": "github_basis.html#discussion",
+    "title": "GitHub Training",
+    "section": "Discussion",
+    "text": "Discussion"
   },
   {
     "objectID": "github_basis.html#codelist",
