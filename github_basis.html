@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <meta name="dcterms.date" content="2025-10-21">
+  <meta name="dcterms.date" content="2025-10-23">
   <title>GitHub training – GitHub Training</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -138,15 +138,77 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2025-10-21</p>
+  <p class="date">2025-10-23</p>
 </section>
 <section>
 <section id="github-training" class="title-slide slide level1 center">
 <h1>GitHub Training</h1>
 
 </section>
-<section id="what-is-github" class="slide level2">
-<h2>What is GitHub?</h2>
+<section id="git-vs-github-vs-github-desktop" class="slide level2">
+<h2>Git vs GitHub vs GitHub Desktop</h2>
+<p><strong>Git</strong> is a distributed version control system that tracks changes in source code during software development and allows multiple developers to collaborate efficiently.</p>
+<div class="fragment">
+<p><strong>GitHub</strong> is a web-based platform that provides hosting for Git repositories, along with collaborative features like issue tracking, pull requests, and project management.</p>
+</div>
+<div class="fragment">
+<p><strong>GitHub Desktop</strong> is a graphical user interface (GUI) application that simplifies the interaction with Git and GitHub, allowing users to perform common repository operations without using the command line.</p>
+</div>
+</section></section>
+<section>
+<section id="core-concepts" class="title-slide slide level1 center">
+<h1>Core Concepts</h1>
+
+</section>
+<section id="repository-repo" class="slide level2">
+<h2>Repository (Repo)</h2>
+<p>A repository is essentially a <strong>project’s folder</strong>. It contains all the project files, including code, documentation, images, and, most importantly, the <strong>entire history</strong> of every change made to those files.</p>
+</section>
+<section id="clone" class="slide level2">
+<h2>Clone</h2>
+<p>Get a copy of the repository onto your local machine or GitHub account.</p>
+</section>
+<section id="commit" class="slide level2">
+<h2>Commit</h2>
+<p>A <strong>commit</strong> is a snapshot of your repository at a specific point in time. It’s the fundamental building block of Git’s history.</p>
+<ul>
+<li class="fragment"><p>Every commit has a unique ID (SHA), an author, a timestamp, and a <strong>commit message</strong> that explains <em>why</em> the change was made.</p></li>
+<li class="fragment"><p>Commits are what you create <em>locally</em> with Git.</p></li>
+</ul>
+</section>
+<section id="push-pull" class="slide level2">
+<h2>Push &amp; Pull</h2>
+<p>These are the actions used to synchronize your local Git repository with the remote repository on GitHub:</p>
+<ul>
+<li class="fragment"><p><strong>Push:</strong> To <strong>send</strong> your local commits from your computer to the remote repository on GitHub.</p></li>
+<li class="fragment"><p><strong>Pull:</strong> To <strong>fetch</strong> and <strong>download</strong> changes (commits) from the remote repository on GitHub to your local computer.</p></li>
+</ul>
+</section>
+<section id="branch" class="slide level2">
+<h2>Branch</h2>
+<p>A <strong>branch</strong> is an independent line of development.</p>
+<ul>
+<li class="fragment"><p>The default and main line of development is typically called the <strong>main</strong> branch.</p></li>
+<li class="fragment"><p>Branches allow developers to work on new features or bug fixes in <strong>isolation</strong> without affecting the stable, main code.</p></li>
+</ul>
+</section>
+<section id="fork" class="slide level2">
+<h2>Fork</h2>
+<p>A <strong>fork</strong> is a personal copy of another user’s repository. You can make changes to your copy without affecting the original. It’s often the first step in contributing to a project you don’t own.</p>
+</section>
+<section id="pull-request-pr" class="slide level2">
+<h2>Pull Request (PR)</h2>
+<p>A <strong>Pull Request</strong> is a mechanism for a developer to propose their changes (commits from a branch) to be <strong>merged</strong> into another branch (usually the main branch of the original project).</p>
+<ul>
+<li class="fragment">PRs are where discussion, code review, and automated testing happen before the code is integrated.</li>
+</ul>
+</section>
+<section id="merge" class="slide level2">
+<h2>Merge</h2>
+<p>The <strong>merge</strong> operation integrates the changes from one branch into another. When a Pull Request is approved, the repository maintainer will <strong>merge</strong> the feature branch into the main branch.</p>
+</section>
+<section id="workflow" class="slide level2">
+<h2>Workflow</h2>
 <ul>
 <li class="fragment">git</li>
 <li class="fragment">clone</li>

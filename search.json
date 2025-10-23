@@ -1,9 +1,72 @@
 [
   {
-    "objectID": "github_basis.html#what-is-github",
-    "href": "github_basis.html#what-is-github",
+    "objectID": "github_basis.html#git-vs-github-vs-github-desktop",
+    "href": "github_basis.html#git-vs-github-vs-github-desktop",
     "title": "GitHub Training",
-    "section": "What is GitHub?",
-    "text": "What is GitHub?\n\ngit\nclone\n.gitignore\nmerging conflicts\nupdate from main\npull push\nbranches"
+    "section": "Git vs GitHub vs GitHub Desktop",
+    "text": "Git vs GitHub vs GitHub Desktop\nGit is a distributed version control system that tracks changes in source code during software development and allows multiple developers to collaborate efficiently.\n\nGitHub is a web-based platform that provides hosting for Git repositories, along with collaborative features like issue tracking, pull requests, and project management.\n\n\nGitHub Desktop is a graphical user interface (GUI) application that simplifies the interaction with Git and GitHub, allowing users to perform common repository operations without using the command line."
+  },
+  {
+    "objectID": "github_basis.html#repository-repo",
+    "href": "github_basis.html#repository-repo",
+    "title": "GitHub Training",
+    "section": "Repository (Repo)",
+    "text": "Repository (Repo)\nA repository is essentially a project’s folder. It contains all the project files, including code, documentation, images, and, most importantly, the entire history of every change made to those files."
+  },
+  {
+    "objectID": "github_basis.html#clone",
+    "href": "github_basis.html#clone",
+    "title": "GitHub Training",
+    "section": "Clone",
+    "text": "Clone\nGet a copy of the repository onto your local machine or GitHub account."
+  },
+  {
+    "objectID": "github_basis.html#commit",
+    "href": "github_basis.html#commit",
+    "title": "GitHub Training",
+    "section": "Commit",
+    "text": "Commit\nA commit is a snapshot of your repository at a specific point in time. It’s the fundamental building block of Git’s history.\n\nEvery commit has a unique ID (SHA), an author, a timestamp, and a commit message that explains why the change was made.\nCommits are what you create locally with Git."
+  },
+  {
+    "objectID": "github_basis.html#push-pull",
+    "href": "github_basis.html#push-pull",
+    "title": "GitHub Training",
+    "section": "Push & Pull",
+    "text": "Push & Pull\nThese are the actions used to synchronize your local Git repository with the remote repository on GitHub:\n\nPush: To send your local commits from your computer to the remote repository on GitHub.\nPull: To fetch and download changes (commits) from the remote repository on GitHub to your local computer."
+  },
+  {
+    "objectID": "github_basis.html#branch",
+    "href": "github_basis.html#branch",
+    "title": "GitHub Training",
+    "section": "Branch",
+    "text": "Branch\nA branch is an independent line of development.\n\nThe default and main line of development is typically called the main branch.\nBranches allow developers to work on new features or bug fixes in isolation without affecting the stable, main code."
+  },
+  {
+    "objectID": "github_basis.html#fork",
+    "href": "github_basis.html#fork",
+    "title": "GitHub Training",
+    "section": "Fork",
+    "text": "Fork\nA fork is a personal copy of another user’s repository. You can make changes to your copy without affecting the original. It’s often the first step in contributing to a project you don’t own."
+  },
+  {
+    "objectID": "github_basis.html#pull-request-pr",
+    "href": "github_basis.html#pull-request-pr",
+    "title": "GitHub Training",
+    "section": "Pull Request (PR)",
+    "text": "Pull Request (PR)\nA Pull Request is a mechanism for a developer to propose their changes (commits from a branch) to be merged into another branch (usually the main branch of the original project).\n\nPRs are where discussion, code review, and automated testing happen before the code is integrated."
+  },
+  {
+    "objectID": "github_basis.html#merge",
+    "href": "github_basis.html#merge",
+    "title": "GitHub Training",
+    "section": "Merge",
+    "text": "Merge\nThe merge operation integrates the changes from one branch into another. When a Pull Request is approved, the repository maintainer will merge the feature branch into the main branch."
+  },
+  {
+    "objectID": "github_basis.html#workflow",
+    "href": "github_basis.html#workflow",
+    "title": "GitHub Training",
+    "section": "Workflow",
+    "text": "Workflow\n\ngit\nclone\n.gitignore\nmerging conflicts\nupdate from main\npull push\nbranches"
   }
 ]
