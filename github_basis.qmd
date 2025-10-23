@@ -85,6 +85,10 @@ Get a copy of the repository onto your local machine or GitHub account.
 
 ![](images/clone.png){fig-align="center"}
 
+. . .
+
+![](images/clone2.png){fig-align="center"}
+
 ## Branch
 
 A **branch** is an independent line of development.
