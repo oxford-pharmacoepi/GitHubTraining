@@ -247,9 +247,53 @@ The `.gitignore` file tells **git** which files or folders to skip when tracking
 
 ![](images/conflict.png){fig-align="center"}
 
+## Let's create a merging conflict
+
+- Go to your branch
+
+- Update from main (if you did not do it before)
+
+- Edit **Extenssively** the `README.md` file
+
+- Open a Pull Request
+
+## Merging conflicts
+
+A merging conflict can involve several files and folders, can be massive and sometimes unsolvable! Please follow the following tips to avoid merging conflicts:
+
+- Avoid renaming of files and folders.
+
+- Always **Update from main** before adding some changes to your branch.
+
+- Keep the changes the minimum possible time (<1 day).
+
+- Better 3 separated Pull Requests over 3 consecutive days than 1 merging conflict after 3 days!
+
 ## Issues
 
-## Discussion
+. . .
+
+An **issue** is a record used to track and manage tasks, bugs, or feature requests within a project. It serves as a central place for team members to describe a problem or idea, discuss potential solutions, assign responsibilities, and monitor progress. Issues often include details like titles, descriptions, labels, comments, and status updates, making it easier to collaborate, prioritise work, and maintain a clear overview of what needs to be done throughout the development process.
+
+. . .
+
+![](images/new_issue.png){fig-align="center"}
+
+## Issues
+
+- **Labels**: Labels are tags used to categorise and organise issues by topic, priority, or status.
+
+- **Assignee**: The assignee is the person responsible for handling or resolving the issue.
+
+- **Type**: The type indicates the nature of the issue, such as a *bug*, *feature request*, or *task*.
+
+## Templates
+
+. . .
+
+Templates can be used to create new repositories:
+
+![](images/template.png){fig-align="center"}
 
 # Codelists and conceptSetExpressions
 
