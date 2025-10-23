@@ -161,18 +161,39 @@
     "text": "Merging conflicts"
   },
   {
+    "objectID": "github_basis.html#lets-create-a-merging-conflict",
+    "href": "github_basis.html#lets-create-a-merging-conflict",
+    "title": "GitHub Training",
+    "section": "Let’s create a merging conflict",
+    "text": "Let’s create a merging conflict\n\nGo to your branch\nUpdate from main (if you did not do it before)\nEdit Extenssively the README.md file\nOpen a Pull Request"
+  },
+  {
+    "objectID": "github_basis.html#merging-conflicts-2",
+    "href": "github_basis.html#merging-conflicts-2",
+    "title": "GitHub Training",
+    "section": "Merging conflicts",
+    "text": "Merging conflicts\nA merging conflict can involve several files and folders, can be massive and sometimes unsolvable! Please follow the following tips to avoid merging conflicts:\n\nAvoid renaming of files and folders.\nAlways Update from main before adding some changes to your branch.\nKeep the changes the minimum possible time (&lt;1 day).\nBetter 3 separated Pull Requests over 3 consecutive days than 1 merging conflict after 3 days!"
+  },
+  {
     "objectID": "github_basis.html#issues",
     "href": "github_basis.html#issues",
     "title": "GitHub Training",
     "section": "Issues",
-    "text": "Issues"
+    "text": "Issues\n\nAn issue is a record used to track and manage tasks, bugs, or feature requests within a project. It serves as a central place for team members to describe a problem or idea, discuss potential solutions, assign responsibilities, and monitor progress. Issues often include details like titles, descriptions, labels, comments, and status updates, making it easier to collaborate, prioritise work, and maintain a clear overview of what needs to be done throughout the development process."
   },
   {
-    "objectID": "github_basis.html#discussion",
-    "href": "github_basis.html#discussion",
+    "objectID": "github_basis.html#issues-1",
+    "href": "github_basis.html#issues-1",
     "title": "GitHub Training",
-    "section": "Discussion",
-    "text": "Discussion"
+    "section": "Issues",
+    "text": "Issues\n\nLabels: Labels are tags used to categorise and organise issues by topic, priority, or status.\nAssignee: The assignee is the person responsible for handling or resolving the issue.\nType: The type indicates the nature of the issue, such as a bug, feature request, or task."
+  },
+  {
+    "objectID": "github_basis.html#templates",
+    "href": "github_basis.html#templates",
+    "title": "GitHub Training",
+    "section": "Templates",
+    "text": "Templates\n\nTemplates can be used to create new repositories:"
   },
   {
     "objectID": "github_basis.html#codelist",
