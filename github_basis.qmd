@@ -30,7 +30,67 @@ editor: visual
 options(width = 130)
 ```
 
-## What is GitHub?
+## Git vs GitHub vs GitHub Desktop
+
+**Git** is a distributed version control system that tracks changes in source code during software development and allows multiple developers to collaborate efficiently.
+
+. . .
+
+**GitHub** is a web-based platform that provides hosting for Git repositories, along with collaborative features like issue tracking, pull requests, and project management.
+
+. . .
+
+**GitHub Desktop** is a graphical user interface (GUI) application that simplifies the interaction with Git and GitHub, allowing users to perform common repository operations without using the command line.
+
+# Core Concepts
+
+## Repository (Repo)
+
+A repository is essentially a **project's folder**. It contains all the project files, including code, documentation, images, and, most importantly, the **entire history** of every change made to those files.
+
+## Clone
+
+Get a copy of the repository onto your local machine or GitHub account.
+
+## Commit
+
+A **commit** is a snapshot of your repository at a specific point in time. It's the fundamental building block of Git's history.
+
+* Every commit has a unique ID (SHA), an author, a timestamp, and a **commit message** that explains *why* the change was made.
+
+* Commits are what you create *locally* with Git.
+
+## Push & Pull
+
+These are the actions used to synchronize your local Git repository with the remote repository on GitHub:
+
+* **Push:** To **send** your local commits from your computer to the remote repository on GitHub.
+
+* **Pull:** To **fetch** and **download** changes (commits) from the remote repository on GitHub to your local computer.
+
+## Branch
+
+A **branch** is an independent line of development.
+
+* The default and main line of development is typically called the **main** branch.
+
+* Branches allow developers to work on new features or bug fixes in **isolation** without affecting the stable, main code.
+
+## Fork
+
+A **fork** is a personal copy of another user's repository. You can make changes to your copy without affecting the original. It's often the first step in contributing to a project you don't own.
+
+## Pull Request (PR)
+
+A **Pull Request** is a mechanism for a developer to propose their changes (commits from a branch) to be **merged** into another branch (usually the main branch of the original project).
+
+* PRs are where discussion, code review, and automated testing happen before the code is integrated.
+
+## Merge
+
+The **merge** operation integrates the changes from one branch into another. When a Pull Request is approved, the repository maintainer will **merge** the feature branch into the main branch.
+
+## Workflow
 
 - git
 - clone

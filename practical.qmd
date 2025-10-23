@@ -14,3 +14,4 @@ P1: edit readme 1
 P2: edit readme 2
 P3: rename folder of concepts folder
 P4: concepts in json file to csv file
+Change a concept set 
