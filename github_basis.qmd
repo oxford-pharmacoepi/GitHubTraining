@@ -79,11 +79,11 @@ Get a copy of the repository onto your local machine or GitHub account.
 
 . . .
 
-![](images/clone.png){fig-align="center"}
+![](images/clone.png){fig-align="center" height="250px"}
 
 . . .
 
-![](images/clone2.png){fig-align="center"}
+![](images/clone2.png){fig-align="center" height="250px"}
 
 ## Branch
 
@@ -95,20 +95,21 @@ A **branch** is an independent line of development.
 
 . . .
 
-![](images/branch1.png){fig-align="center", height="25%"}
+![](images/branch1.png){fig-align="center" height="150px"}
 
-. . .
+![](images/branch2.png){fig-align="center" height="150px"}
 
-![](images/branch2.png){fig-align="center", height="25%"}
-
-. . .
-
-![](images/branch3.png){fig-align="center", height="25%"}
+![](images/branch3.png){fig-align="center" height="50px"}
 
 ## Fork
 
 A **fork** is a personal copy of another user's repository. You can make changes to your copy without affecting the original. It's often the first step in contributing to a project you don't own.
 
+- *We will see this in the practical.*
+
+## Open the project locally
+
+![](images/project.png){fig-align="center"}
 
 ## Commit
 
@@ -118,13 +119,31 @@ A **commit** is a snapshot of your repository at a specific point in time. It's 
 
 * Commits are what you create *locally* with Git.
 
+## Create a new file
+
+- Open the `mds` folder.
+
+- `File` > `New File` > `Text File` > `your_name.md`
+
+- Add some content
+
+- Add a message in the commit box
+
+- Click commit
+
+- **Don't do anything else**
+
 ## Push & Pull
 
-These are the actions used to synchronize your local Git repository with the remote repository on GitHub:
+These are the actions used to synchronise your local Git repository with the remote repository on GitHub:
 
 * **Push:** To **send** your local commits from your computer to the remote repository on GitHub.
 
-* **Pull:** To **fetch** and **download** changes (commits) from the remote repository on GitHub to your local computer.
+* **Pull:** To **fetch** and **download** changes (commits) from the remote repository on GitHub to your local computer. (*We will see it later*)
+
+. . .
+
+![](images/push.png){fig-align="center"}
 
 ## Pull Request (PR)
 
@@ -135,6 +154,10 @@ A **Pull Request** is a mechanism for a developer to propose their changes (comm
 ## Merge
 
 The **merge** operation integrates the changes from one branch into another. When a Pull Request is approved, the repository maintainer will **merge** the feature branch into the main branch.
+
+## Pull
+
+
 
 ## How everything works
 
