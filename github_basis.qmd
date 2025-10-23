@@ -149,18 +149,37 @@ These are the actions used to synchronise your local Git repository with the rem
 
 A **Pull Request** is a mechanism for a developer to propose their changes (commits from a branch) to be **merged** into another branch (usually the main branch of the original project).
 
-* PRs are where discussion, code review, and automated testing happen before the code is integrated.
+- PRs are where discussion, code review, and automated testing happen before the code is integrated.
+
+## Our first PR
+
+![](images/pr.png){fig-align="center"}
+
+. . .
+
+![](images/pr2.png){fig-align="center"}
 
 ## Merge
 
 The **merge** operation integrates the changes from one branch into another. When a Pull Request is approved, the repository maintainer will **merge** the feature branch into the main branch.
 
+- Let's merge your **Pull Requests**
+
 ## Pull
 
+**Pull:** To **fetch** and **download** changes (commits) from the remote repository on GitHub to your local computer. (*We will see it later*)
 
+- Change to `main` branch
+
+- Fetch origin
+
+- Pull from origin
 
 ## How everything works
 
+**Git**
+
+::: {.small-text}
 | Command | Description |
 |----------|--------------|
 | `git init` | Create a new local repository. |
@@ -178,8 +197,23 @@ The **merge** operation integrates the changes from one branch into another. Whe
 | `git pull` | Fetch and merge changes from remote. |
 | `git push` | Push local commits to remote. |
 | `git revert <commit>` | Revert a specific commit with a new one. |
+:::
+
+. . .
+
+**GitHub Desktop**: provides the User Interface.
 
 ## Workflow
+
+![](images/workflow.png){fig-align="center"}
+
+## Need to update
+
+![](images/need_update.png){fig-align="center"}
+
+## Update from main
+
+![](images/update_from_main.png){fig-align="center"}
 
 ## Update from main
 

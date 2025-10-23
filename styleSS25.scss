@@ -169,3 +169,13 @@ figcaption {
     word-wrap: break-word !important;
     white-space: pre-wrap !important;
 }
+
+.small-text,
+.small-text table,
+.small-text th,
+.small-text td,
+.small-text p,
+.small-text li {
+  font-size: 0.85em;
+  line-height: 1.15;
+}
