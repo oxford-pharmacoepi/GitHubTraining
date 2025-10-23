@@ -217,9 +217,39 @@ The **merge** operation integrates the changes from one branch into another. Whe
 
 ## Update from main
 
+- Change to `your_branch` branch
+
+- `Branch` > `Update from main`
+
+- `Push`
+
+. . .
+
+![](images/update_main.png){fig-align="center" height="500px"}
+
 ## .gitignore
 
+. . .
+
+The `.gitignore` file tells **git** which files or folders to skip when tracking changes. It prevents temporary, sensitive, or unnecessary files from being added to a repository. Common examples include log files, build artifacts, and environment files. This keeps the repo clean and focused on essential code and assets.
+
+- You can ignore a file if you include the name on it `my_file.txt`.
+
+- You can ignore a folder if you include on it `folder/`.
+
+- You can ignore files using patterns (e.g. this would ignore all .txt files `*.txt`)
+
 ## Merging conflicts
+
+![](images/resolve.png){fig-align="center"}
+
+## Merging conflicts
+
+![](images/conflict.png){fig-align="center"}
+
+## Issues
+
+## Discussion
 
 # Codelists and conceptSetExpressions
 
