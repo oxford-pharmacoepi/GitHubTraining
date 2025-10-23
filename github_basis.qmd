@@ -81,7 +81,22 @@ You can usually format
 
 Get a copy of the repository onto your local machine or GitHub account.
 
+. . .
+
 ![](images/clone.png){fig-align="center"}
+
+## Branch
+
+A **branch** is an independent line of development.
+
+- The default and main line of development is typically called the **main** branch.
+
+- Branches allow developers to work on new features or bug fixes in **isolation** without affecting the stable, main code.
+
+## Fork
+
+A **fork** is a personal copy of another user's repository. You can make changes to your copy without affecting the original. It's often the first step in contributing to a project you don't own.
+
 
 ## Commit
 
@@ -98,18 +113,6 @@ These are the actions used to synchronize your local Git repository with the rem
 * **Push:** To **send** your local commits from your computer to the remote repository on GitHub.
 
 * **Pull:** To **fetch** and **download** changes (commits) from the remote repository on GitHub to your local computer.
-
-## Branch
-
-A **branch** is an independent line of development.
-
-* The default and main line of development is typically called the **main** branch.
-
-* Branches allow developers to work on new features or bug fixes in **isolation** without affecting the stable, main code.
-
-## Fork
-
-A **fork** is a personal copy of another user's repository. You can make changes to your copy without affecting the original. It's often the first step in contributing to a project you don't own.
 
 ## Pull Request (PR)
 
