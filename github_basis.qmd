@@ -26,10 +26,6 @@ editor: visual
 
 ## Git vs GitHub vs GitHub Desktop
 
-```{r, echo=FALSE}
-options(width = 130)
-```
-
 . . .
 
 **Git** is a distributed version control system that tracks changes in source code during software development and allows multiple developers to collaborate efficiently.
