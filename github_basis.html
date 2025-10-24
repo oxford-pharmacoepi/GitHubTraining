@@ -581,9 +581,7 @@
 <section id="lets-get-started" class="slide level2">
 <h2>Let’s get started</h2>
 <div class="fragment">
-<ol type="1">
-<li class="fragment">Make sure you have the latest version of the needed packages:</li>
-</ol>
+<p><em>1 Make sure you have the latest version of the needed packages:</em></p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"pak"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -592,29 +590,19 @@
 </div>
 </div>
 <div class="fragment">
-<ol start="2" type="1">
-<li class="fragment">Set up your <code>OMOP_DATA_FOLDER</code></li>
-</ol>
-<p>Open your <code>.Renviron</code> file and write the following</p>
+<p><em>2 Set up your <code>OMOP_DATA_FOLDER</code>:</em></p>
+<p>Open your <code>.Renviron</code> (<code>usethis::edit_r_environ()</code>) file and write the following:</p>
 <pre><code>OMOP_DATA_FOLDER="path/to/data"</code></pre>
+<p>Then restart R.</p>
 </div>
 <div class="fragment">
-<ol start="3" type="1">
-<li class="fragment">Restart R</li>
-</ol>
-</div>
-<div class="fragment">
-<ol start="4" type="1">
-<li class="fragment">Check that the environment variable is correctly set up</li>
-</ol>
+<p><em>3 Check that the environment variable is correctly set up:</em></p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.getenv</span>(<span class="st">"OMOP_DATA_FOLDER"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <div class="fragment">
-<ol start="5" type="1">
-<li class="fragment">Create a cdm reference:</li>
-</ol>
+<p><em>4 Create a cdm reference:</em></p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(omock)</span>
 <span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(duckdb)</span>
