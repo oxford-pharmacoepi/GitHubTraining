@@ -1,17 +1,24 @@
 
 # Practical session
 
-- Do a first contribution:
-P1: add a readme
-P2: create a code to run
-P3: add concept sets
-P4: add the duckdb database
+Go to the <https://github.com/OHDSI/OmopConcepts> and commit a concept set.
 
-- Add your name in the readme
+- Read the [How to contribute](https://ohdsi.github.io/OmopConcepts/articles/contribute.html) vignette.
 
-- Second contribution:
-P1: edit readme 1
-P2: edit readme 2
-P3: rename folder of concepts folder
-P4: concepts in json file to csv file
-Change a concept set 
+- Fork/Clone the repository
+
+- Search for a concept set from a past study that you think it could be useful for others to reuse. In particular consider to contribute with concept sets that can be useful for a table 1 (general conditions or medications) or to calculate the [Charlson Comorbidity index](https://www.mdcalc.com/calc/3917/charlson-comorbidity-index-cci).
+
+- Save it in `resources/concept_sets`
+
+- Document with metadata in `resources/metadata.csv` (do not worry about merging conflicts): add brief description, your GitHub user name.
+
+- Add tags if relevant in `resources/tags_metadata.csv`.
+
+- Commit
+
+- Push
+
+- Pull Request
+
+- Do it again :)
