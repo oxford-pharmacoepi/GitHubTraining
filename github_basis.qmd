@@ -167,7 +167,7 @@ The **merge** operation integrates the changes from one branch into another. Whe
 
 ## Pull
 
-**Pull:** To **fetch** and **download** changes (commits) from the remote repository on GitHub to your local computer. (*We will see it later*)
+**Pull:** To **fetch** and **download** changes (commits) from the remote repository on GitHub to your local computer.
 
 - Change to `main` branch
 
@@ -253,7 +253,7 @@ The `.gitignore` file tells **git** which files or folders to skip when tracking
 
 - Update from main (if you did not do it before)
 
-- Edit **Extenssively** the `README.md` file
+- Edit **Extensively** the `README.md` file
 
 - Open a Pull Request
 
@@ -315,7 +315,7 @@ Templates can be used to create new repositories:
 
 ## Let's get started
 
-1. Make sure you have the latest version of the neede packages:
+1. Make sure you have the latest version of the needed packages:
 
 ```{r, eval=FALSE}
 install.packages("pak")
