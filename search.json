@@ -102,7 +102,7 @@
     "href": "github_basis.html#pull",
     "title": "GitHub Training",
     "section": "Pull",
-    "text": "Pull\nPull: To fetch and download changes (commits) from the remote repository on GitHub to your local computer. (We will see it later)\n\nChange to main branch\nFetch origin\nPull from origin"
+    "text": "Pull\nPull: To fetch and download changes (commits) from the remote repository on GitHub to your local computer.\n\nChange to main branch\nFetch origin\nPull from origin"
   },
   {
     "objectID": "github_basis.html#how-everything-works",
@@ -165,7 +165,7 @@
     "href": "github_basis.html#lets-create-a-merging-conflict",
     "title": "GitHub Training",
     "section": "Let’s create a merging conflict",
-    "text": "Let’s create a merging conflict\n\nGo to your branch\nUpdate from main (if you did not do it before)\nEdit Extenssively the README.md file\nOpen a Pull Request"
+    "text": "Let’s create a merging conflict\n\nGo to your branch\nUpdate from main (if you did not do it before)\nEdit Extensively the README.md file\nOpen a Pull Request"
   },
   {
     "objectID": "github_basis.html#merging-conflicts-2",
@@ -207,7 +207,7 @@
     "href": "github_basis.html#lets-get-started",
     "title": "GitHub Training",
     "section": "Let’s get started",
-    "text": "Let’s get started\n\nMake sure you have the latest version of the neede packages:\n\n\ninstall.packages(\"pak\")\n\n\npak::pkg_install(c(\"omopgenerics\", \"CodelistGenerator\", \"CDMConnector\", \"ohdsi/omock\"))\n\n\n\nSet up your OMOP_DATA_FOLDER\n\nOpen your .Renviron file and write the following\nOMOP_DATA_FOLDER=\"path/to/data\"\n\nRestart R\nCheck that the environment variable is correctly set up\n\n\nSys.getenv(\"OMOP_DATA_FOLDER\")\n\n\nCreate a cdm reference:\n\n\nlibrary(omock)\nlibrary(duckdb)\ncdm &lt;- mockCdmFromDataset(datasetName = \"empty_cdm\", source = \"duckdb\")\ncdm"
+    "text": "Let’s get started\n\nMake sure you have the latest version of the needed packages:\n\n\ninstall.packages(\"pak\")\n\n\npak::pkg_install(c(\"omopgenerics\", \"CodelistGenerator\", \"CDMConnector\", \"ohdsi/omock\"))\n\n\n\nSet up your OMOP_DATA_FOLDER\n\nOpen your .Renviron file and write the following\nOMOP_DATA_FOLDER=\"path/to/data\"\n\nRestart R\nCheck that the environment variable is correctly set up\n\n\nSys.getenv(\"OMOP_DATA_FOLDER\")\n\n\nCreate a cdm reference:\n\n\nlibrary(omock)\nlibrary(duckdb)\ncdm &lt;- mockCdmFromDataset(datasetName = \"empty_cdm\", source = \"duckdb\")\ncdm"
   },
   {
     "objectID": "github_basis.html#codelistgenerator",
