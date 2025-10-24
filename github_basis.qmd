@@ -313,9 +313,24 @@ Templates can be used to create new repositories:
 
 # Codelists and conceptSetExpressions
 
-## Database
+## Let's get started
 
-For this practical we will use 
+1. Make sure you have the latest version of the neede packages:
+
+```{r, eval=FALSE}
+install.packages("pak")
+pak::pkg_install(c("omopgenerics", "CodelistGenerator", "CDMConnector"))
+```
+
+. . .
+
+2. Download the vocabulary database with vocabularies from 2025:
+
+```{r}
+library(here)
+```
+
+For this practical we will use a vocabulary only
 
 ## CodelistGenerator
 
@@ -434,11 +449,48 @@ We do not provide any function to create concept_set_expression, but they can ea
 . . .
 
 ```{r}
-
+cse <- list(concept_name = tibble(
+  concept_id = c(1L, 3L),
+  descendants = c(TRUE, TRUE),
+  exclude = c(TRUE, TRUE),
+  mapped = c(TRUE, TRUE)
+)) |>
+  newConceptSetExpression()
+cse
 ```
 
-## `json` and `csv`
+## Your turn
+
+Go to the repository that we were working: <https://github.com/oxford-pharmacoepi/TestRepository>
+
+- Make sure you are in **your branch**
+
+- Make sure **your branch** is updated from main
+
+- Assign an issue (that starts with **CONCEPT SET EXPRESSION STEP 2**) to yourself
+
+- Go to *ATLAS* create the concept set expression
+
+- Export the json file from ATLAS and save it locally (copy paste)
+
+- Import the json file
+
+- Save the csv file 
+
+- Delete the json file
+
+- Save it in the conceptsets folder
+
+- Commit
+
+- Push
+
+- Open a Pull Request (link the Pull Request to the issue)
+
+- Ask for a review
 
 ## From codelist to conceptSetExpression
+
+You can easily convert a `codelist` to a `concept_set_expression`
 
 ## From conceptSetExpression to codelist
