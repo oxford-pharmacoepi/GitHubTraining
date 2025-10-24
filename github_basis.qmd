@@ -317,20 +317,36 @@ Templates can be used to create new repositories:
 
 1. Make sure you have the latest version of the neede packages:
 
-```{r, eval=FALSE}
+```{r}
 install.packages("pak")
-pak::pkg_install(c("omopgenerics", "CodelistGenerator", "CDMConnector"))
+pak::pkg_install(c("omopgenerics", "CodelistGenerator", "CDMConnector", "ohdsi/omock"))
 ```
 
 . . .
 
-2. Download the vocabulary database with vocabularies from 2025:
+2. Set up your `OMOP_DATA_FOLDER`
 
-```{r}
-library(here)
+Open your `.Renviron` file and write the following
+
+```
+OMOP_DATA_FOLDER="path/to/data"
 ```
 
-For this practical we will use a vocabulary only
+3. Restart R
+
+4. Check that the environment variable is correctly set up
+
+```{r, eval=FALSE}
+Sys.getenv("OMOP_DATA_FOLDER")
+```
+
+5. Create a cdm reference:
+
+```{r}
+library(omock)
+cdm <- mockCdmFromDataset(datasetName = "empty_cdm", source = "duckdb")
+cdm
+```
 
 ## CodelistGenerator
 
@@ -338,6 +354,7 @@ To deal with *codelist* and *concept_set_expression* objects we will use the **C
 
 ```{r}
 library(CodelistGenerator)
+library(tibble)
 ```
 
 ## Codelist
@@ -347,7 +364,7 @@ library(CodelistGenerator)
 A codelist is a named list of codes to be used in a study you can create a simple codelist as:
 
 ```{r}
-codes <- list(codelist_name = c(1L, 2L, 3L)) |>
+codes <- list(codelist_name = c(252942L, 257581L, 313236L)) |>
   newCodelist()
 codes
 ```
@@ -357,7 +374,7 @@ codes
 A `codelist` object can contain multiple codelists:
 
 ```{r}
-codes <- list(codelist_1 = c(1L, 2L, 3L), codelist_2 = c(4L, 5L)) |>
+codes <- list(codelist_1 = c(252942L, 257581L, 313236L), codelist_2 = c(46269775L, 46269784L)) |>
   newCodelist()
 codes
 ```
@@ -369,7 +386,7 @@ codes
 You can create a codelist using drug ingredients like:
 
 ```{r}
-codes <- getDrugIngredientCodes(cdm = cdm, name = "acetaminophen", routeCategory = "oral")
+codes <- getDrugIngredientCodes(cdm = cdm, name = "acetaminophen", routeCategory = "oral", nameStyle = "{concept_name}")
 codes
 ```
 
@@ -450,9 +467,9 @@ We do not provide any function to create concept_set_expression, but they can ea
 
 ```{r}
 cse <- list(concept_name = tibble(
-  concept_id = c(1L, 3L),
+  concept_id = c(317009L, 257581L),
   descendants = c(TRUE, TRUE),
-  exclude = c(TRUE, TRUE),
+  excluded = c(FALSE, TRUE),
   mapped = c(TRUE, TRUE)
 )) |>
   newConceptSetExpression()
@@ -488,6 +505,30 @@ Go to the repository that we were working: <https://github.com/oxford-pharmacoep
 - Open a Pull Request (link the Pull Request to the issue)
 
 - Ask for a review
+
+## Let's review
+
+. . .
+
+**Live demo**
+
+## Your turn
+
+- Provide a review (ask sth random):
+
+  - To add another concept
+  - To change one of the logic
+  - To change the name of the concept set expression
+
+## Your turn
+
+- Do it yourself!
+
+- Whatever you asked in the review **do it**
+
+- Change the brach to the one your collegue was in
+
+- Edit the concept set with whatever random request you came with
 
 ## From codelist to conceptSetExpression
 
