@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <meta name="dcterms.date" content="2025-10-23">
+  <meta name="dcterms.date" content="2025-10-24">
   <title>GitHub training – GitHub Training</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -28,6 +28,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-3d00f7cd78dbd7f08392e842a6493921.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -138,7 +204,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2025-10-23</p>
+  <p class="date">2025-10-24</p>
 </section>
 <section id="git-vs-github-vs-github-desktop" class="slide level2">
 <h2>Git vs GitHub vs GitHub Desktop</h2>
@@ -481,6 +547,21 @@
 <li class="fragment"><p><strong>Type</strong>: The type indicates the nature of the issue, such as a <em>bug</em>, <em>feature request</em>, or <em>task</em>.</p></li>
 </ul>
 </section>
+<section id="link-an-pull-request-to-an-issue" class="slide level2">
+<h2>Link an Pull Request to an issue</h2>
+<p>You can use <em>‘magical’</em> words to close an issue from a pull request:</p>
+<ul>
+<li class="fragment">close #12 / closes #12</li>
+<li class="fragment">resolve #12 / resolves #12</li>
+<li class="fragment">fix #12 / fixes #12</li>
+</ul>
+<div class="fragment">
+<p><strong>Remember this as we will use it later!</strong></p>
+</div>
+<div class="fragment">
+<p>You can otherwise link issues manually using the <em>development</em> tab.</p>
+</div>
+</section>
 <section id="templates" class="slide level2">
 <h2>Templates</h2>
 <div class="fragment">
@@ -497,26 +578,279 @@
 <h1>Codelists and conceptSetExpressions</h1>
 
 </section>
+<section id="lets-get-started" class="slide level2">
+<h2>Let’s get started</h2>
+<ol type="1">
+<li class="fragment">Make sure you have the latest version of the neede packages:</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"pak"</span>)</span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pkg_install</span>(<span class="fu">c</span>(<span class="st">"omopgenerics"</span>, <span class="st">"CodelistGenerator"</span>, <span class="st">"CDMConnector"</span>, <span class="st">"ohdsi/omock"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
+<li class="fragment">Set up your <code>OMOP_DATA_FOLDER</code></li>
+</ol>
+<p>Open your <code>.Renviron</code> file and write the following</p>
+<pre><code>OMOP_DATA_FOLDER="path/to/data"</code></pre>
+<ol start="3" type="1">
+<li class="fragment"><p>Restart R</p></li>
+<li class="fragment"><p>Check that the environment variable is correctly set up</p></li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.getenv</span>(<span class="st">"OMOP_DATA_FOLDER"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="5" type="1">
+<li class="fragment">Create a cdm reference:</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(omock)</span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(duckdb)</span>
+<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>cdm <span class="ot">&lt;-</span> <span class="fu">mockCdmFromDataset</span>(<span class="at">datasetName =</span> <span class="st">"empty_cdm"</span>, <span class="at">source =</span> <span class="st">"duckdb"</span>)</span>
+<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a>cdm</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+<section id="codelistgenerator" class="slide level2">
+<h2>CodelistGenerator</h2>
+<p>To deal with <em>codelist</em> and <em>concept_set_expression</em> objects we will use the <strong>CodelistGenerator</strong> package:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(CodelistGenerator)</span>
+<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tibble)</span>
+<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(omopgenerics)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
 <section id="codelist" class="slide level2">
 <h2>Codelist</h2>
+<div class="fragment">
+<p>A codelist is a named list of codes to be used in a study you can create a simple codelist as:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a>codes <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">codelist_name =</span> <span class="fu">c</span>(<span class="dv">252942</span>L, <span class="dv">257581</span>L, <span class="dv">313236</span>L)) <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">newCodelist</span>()</span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a>codes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+- codelist_name (3 codes)</code></pre>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>A <code>codelist</code> object can contain multiple codelists:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a>codes <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">codelist_1 =</span> <span class="fu">c</span>(<span class="dv">252942</span>L, <span class="dv">257581</span>L, <span class="dv">313236</span>L), <span class="at">codelist_2 =</span> <span class="fu">c</span>(<span class="dv">46269775</span>L, <span class="dv">46269784</span>L)) <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">newCodelist</span>()</span>
+<span id="cb8-3"><a aria-hidden="true" tabindex="-1"></a>codes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+- codelist_1 (3 codes)
+- codelist_2 (2 codes)</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="codelist-1" class="slide level2">
+<h2>Codelist</h2>
+<div class="fragment">
+<p>You can create a codelist using drug ingredients like:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a>codes <span class="ot">&lt;-</span> <span class="fu">getDrugIngredientCodes</span>(<span class="at">cdm =</span> cdm, <span class="at">name =</span> <span class="st">"acetaminophen"</span>, <span class="at">routeCategory =</span> <span class="st">"oral"</span>, <span class="at">nameStyle =</span> <span class="st">"{concept_name}"</span>)</span>
+<span id="cb10-2"><a aria-hidden="true" tabindex="-1"></a>codes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+- acetaminophen (18755 codes)</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="codelist-2" class="slide level2">
+<h2>Codelist</h2>
+<div class="fragment">
+<p>You can create a codelist from a text search:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a>candidates <span class="ot">&lt;-</span> <span class="fu">getCandidateCodes</span>(<span class="at">cdm =</span> cdm, <span class="at">keywords =</span> <span class="st">"covid"</span>)</span>
+<span id="cb12-2"><a aria-hidden="true" tabindex="-1"></a>codes <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">covid =</span> candidates<span class="sc">$</span>concept_id) <span class="sc">|&gt;</span></span>
+<span id="cb12-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">newCodelist</span>()</span>
+<span id="cb12-4"><a aria-hidden="true" tabindex="-1"></a>codes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+- covid (29 codes)</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="codelist-3" class="slide level2">
+<h2>Codelist</h2>
+<p>As we have seen codelists are deterministic and do <strong>not</strong> depend on vocabularies, but they can be <strong>long</strong> and difficult to manage.</p>
+</section>
+<section id="export-codelist" class="slide level2">
+<h2>Export Codelist</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">exportCodelist</span>(<span class="at">x =</span> codes, <span class="at">path =</span> <span class="fu">here</span>(), <span class="at">type =</span> <span class="st">"csv"</span>)</span>
+<span id="cb14-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">exportCodelist</span>(<span class="at">x =</span> codes, <span class="at">path =</span> <span class="fu">here</span>(), <span class="at">type =</span> <span class="st">"json"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="import-a-codelist-in-atlas" class="slide level2">
+<h2>Import a codelist in ATLAS</h2>
+<p>Really?</p>
+</section>
+<section id="import-a-codelist" class="slide level2">
+<h2>Import a codelist</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a>codes <span class="ot">&lt;-</span> <span class="fu">importCodelist</span>(<span class="at">path =</span> <span class="fu">here</span>(), <span class="at">type =</span> <span class="st">"csv"</span>)</span>
+<span id="cb15-2"><a aria-hidden="true" tabindex="-1"></a>codes <span class="ot">&lt;-</span> <span class="fu">importCodelist</span>(<span class="at">path =</span> <span class="fu">here</span>(), <span class="at">type =</span> <span class="st">"json"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<p><strong>If you want to be friends use <code>.csv</code></strong></p>
+</div>
+</section>
+<section id="your-turn" class="slide level2">
+<h2>Your turn</h2>
+<p>Go to the repository that we were working: <a href="https://github.com/oxford-pharmacoepi/TestRepository" class="uri">https://github.com/oxford-pharmacoepi/TestRepository</a></p>
+<ul>
+<li class="fragment"><p>Make sure you are in <strong>your branch</strong></p></li>
+<li class="fragment"><p>Make sure <strong>your branch</strong> is updated from main</p></li>
+<li class="fragment"><p>Assign an issue (that starts with <strong>CODELIST STEP 1</strong>) to yourself</p></li>
+<li class="fragment"><p>Create the codelist that you are asked to create</p></li>
+<li class="fragment"><p>Save it in the codelist folder</p></li>
+<li class="fragment"><p>Commit</p></li>
+<li class="fragment"><p>Push</p></li>
+<li class="fragment"><p>Open a Pull Request (link the Pull Request to the issue)</p></li>
+</ul>
 </section>
 <section id="conceptsetexpression" class="slide level2">
 <h2>conceptSetExpression</h2>
+<p>A <code>concept_set_expression</code> is a named list that contains an expression:</p>
+<div class="fragment">
+<p><strong>concept_id</strong> + <strong>logic</strong> (<em>exclude</em> and <em>descendants</em>)</p>
+</div>
 </section>
-<section id="export-and-import" class="slide level2">
-<h2>Export and Import</h2>
+<section id="conceptsetexpression-1" class="slide level2">
+<h2>conceptSetExpression</h2>
+<div class="fragment">
+<p>We do not provide any function to create concept_set_expression, but they can easily be created as a list of tibbles.</p>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a>cse <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">concept_name =</span> <span class="fu">tibble</span>(</span>
+<span id="cb16-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">concept_id =</span> <span class="fu">c</span>(<span class="dv">317009</span>L, <span class="dv">257581</span>L),</span>
+<span id="cb16-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">descendants =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>),</span>
+<span id="cb16-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">excluded =</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">TRUE</span>),</span>
+<span id="cb16-5"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">mapped =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>)</span>
+<span id="cb16-6"><a aria-hidden="true" tabindex="-1"></a>)) <span class="sc">|&gt;</span></span>
+<span id="cb16-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">newConceptSetExpression</span>()</span>
+<span id="cb16-8"><a aria-hidden="true" tabindex="-1"></a>cse</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+- concept_name (2 concept criteria)</code></pre>
+</div>
+</div>
+</div>
 </section>
-<section id="json-and-csv" class="slide level2">
-<h2><code>json</code> and <code>csv</code></h2>
+<section id="your-turn-1" class="slide level2">
+<h2>Your turn</h2>
+<p>Go to the repository that we were working: <a href="https://github.com/oxford-pharmacoepi/TestRepository" class="uri">https://github.com/oxford-pharmacoepi/TestRepository</a></p>
+<ul>
+<li class="fragment"><p>Make sure you are in <strong>your branch</strong></p></li>
+<li class="fragment"><p>Make sure <strong>your branch</strong> is updated from main</p></li>
+<li class="fragment"><p>Assign an issue (that starts with <strong>CONCEPT SET EXPRESSION STEP 2</strong>) to yourself</p></li>
+<li class="fragment"><p>Go to <em>ATLAS</em> create the concept set expression</p></li>
+<li class="fragment"><p>Export the json file from ATLAS and save it locally (copy paste)</p></li>
+<li class="fragment"><p>Import the json file</p></li>
+<li class="fragment"><p>Save the csv file</p></li>
+<li class="fragment"><p>Delete the json file</p></li>
+<li class="fragment"><p>Save it in the conceptsets folder</p></li>
+<li class="fragment"><p>Commit</p></li>
+<li class="fragment"><p>Push</p></li>
+<li class="fragment"><p>Open a Pull Request (link the Pull Request to the issue)</p></li>
+<li class="fragment"><p>Ask for a review</p></li>
+</ul>
+</section>
+<section id="lets-review" class="slide level2">
+<h2>Let’s review</h2>
+<div class="fragment">
+<p><strong>Live demo</strong></p>
+</div>
+</section>
+<section id="your-turn-2" class="slide level2">
+<h2>Your turn</h2>
+<ul>
+<li class="fragment"><p>Provide a review (ask sth random):</p>
+<ul>
+<li class="fragment">To add another concept</li>
+<li class="fragment">To change one of the logic</li>
+<li class="fragment">To change the name of the concept set expression</li>
+</ul></li>
+</ul>
+</section>
+<section id="your-turn-3" class="slide level2">
+<h2>Your turn</h2>
+<ul>
+<li class="fragment"><p>Do it yourself!</p></li>
+<li class="fragment"><p>Whatever you asked in the review <strong>do it</strong></p></li>
+<li class="fragment"><p>Change the branch to the one your colleague was in</p></li>
+<li class="fragment"><p>Edit the concept set with whatever random request you came with</p></li>
+<li class="fragment"><p>Commit</p></li>
+<li class="fragment"><p>Push</p></li>
+<li class="fragment"><p>Ask for the review to the original author</p></li>
+</ul>
 </section>
 <section id="from-codelist-to-conceptsetexpression" class="slide level2">
 <h2>From codelist to conceptSetExpression</h2>
+<p>You can easily convert a <code>codelist</code> to a <code>concept_set_expression</code>:</p>
+<div class="fragment">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a aria-hidden="true" tabindex="-1"></a>codes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+- covid (29 codes)</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">newConceptSetExpression</span>(codes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+- covid (29 concept criteria)</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">exportConceptSetExpression</span>(codes, <span class="at">path =</span> <span class="fu">here</span>(), <span class="at">type =</span> <span class="st">"csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
 </section>
 <section id="from-conceptsetexpression-to-codelist" class="slide level2">
 <h2>From conceptSetExpression to codelist</h2>
+<p>To do that you will need a cdm object to get the descendants and then use the <code>validateConceptSetArgument()</code> function:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a aria-hidden="true" tabindex="-1"></a>cse</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+- concept_name (2 concept criteria)</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a aria-hidden="true" tabindex="-1"></a>codelist <span class="ot">&lt;-</span> <span class="fu">validateConceptSetArgument</span>(<span class="at">conceptSet =</span> cse, <span class="at">cdm =</span> cdm)</span>
+<span id="cb25-2"><a aria-hidden="true" tabindex="-1"></a>codelist</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+- concept_name (83 codes)</code></pre>
+</div>
+</div>
+</section>
+<section id="your-turn-4" class="slide level2">
+<h2>Your turn</h2>
+<ul>
+<li class="fragment"><p>Make sure you are in <strong>your branch</strong></p></li>
+<li class="fragment"><p>Make sure <strong>your branch</strong> is updated from main</p></li>
+<li class="fragment"><p>Assign an issue (that starts with <strong>CONVERT STEP 3</strong>) to yourself</p></li>
+<li class="fragment"><p>Get the concept set expression</p></li>
+<li class="fragment"><p>Convert it into a <code>codelist</code></p></li>
+<li class="fragment"><p>Save it in the <code>codelist</code> folder</p></li>
+<li class="fragment"><p>Commit</p></li>
+<li class="fragment"><p>Push</p></li>
+<li class="fragment"><p>Pull Request</p></li>
+</ul>
+</section>
+<section id="you-are-ready" class="slide level2">
+<h2>You are ready</h2>
 
 
-</section></section>
+
+<img data-src="images/meme.png" class="r-stretch"></section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -741,6 +1075,44 @@ GitHub Training
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

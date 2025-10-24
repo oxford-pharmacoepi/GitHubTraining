@@ -189,6 +189,13 @@
     "text": "Issues\n\nLabels: Labels are tags used to categorise and organise issues by topic, priority, or status.\nAssignee: The assignee is the person responsible for handling or resolving the issue.\nType: The type indicates the nature of the issue, such as a bug, feature request, or task."
   },
   {
+    "objectID": "github_basis.html#link-an-pull-request-to-an-issue",
+    "href": "github_basis.html#link-an-pull-request-to-an-issue",
+    "title": "GitHub Training",
+    "section": "Link an Pull Request to an issue",
+    "text": "Link an Pull Request to an issue\nYou can use ‘magical’ words to close an issue from a pull request:\n\nclose #12 / closes #12\nresolve #12 / resolves #12\nfix #12 / fixes #12\n\n\nRemember this as we will use it later!\n\n\nYou can otherwise link issues manually using the development tab."
+  },
+  {
     "objectID": "github_basis.html#templates",
     "href": "github_basis.html#templates",
     "title": "GitHub Training",
@@ -196,45 +203,143 @@
     "text": "Templates\n\nTemplates can be used to create new repositories:"
   },
   {
+    "objectID": "github_basis.html#lets-get-started",
+    "href": "github_basis.html#lets-get-started",
+    "title": "GitHub Training",
+    "section": "Let’s get started",
+    "text": "Let’s get started\n\nMake sure you have the latest version of the neede packages:\n\n\ninstall.packages(\"pak\")\npak::pkg_install(c(\"omopgenerics\", \"CodelistGenerator\", \"CDMConnector\", \"ohdsi/omock\"))\n\n\n\nSet up your OMOP_DATA_FOLDER\n\nOpen your .Renviron file and write the following\nOMOP_DATA_FOLDER=\"path/to/data\"\n\nRestart R\nCheck that the environment variable is correctly set up\n\n\nSys.getenv(\"OMOP_DATA_FOLDER\")\n\n\nCreate a cdm reference:\n\n\nlibrary(omock)\nlibrary(duckdb)\ncdm &lt;- mockCdmFromDataset(datasetName = \"empty_cdm\", source = \"duckdb\")\ncdm"
+  },
+  {
+    "objectID": "github_basis.html#codelistgenerator",
+    "href": "github_basis.html#codelistgenerator",
+    "title": "GitHub Training",
+    "section": "CodelistGenerator",
+    "text": "CodelistGenerator\nTo deal with codelist and concept_set_expression objects we will use the CodelistGenerator package:\n\nlibrary(CodelistGenerator)\nlibrary(tibble)\nlibrary(here)\nlibrary(omopgenerics)"
+  },
+  {
     "objectID": "github_basis.html#codelist",
     "href": "github_basis.html#codelist",
     "title": "GitHub Training",
     "section": "Codelist",
-    "text": "Codelist"
+    "text": "Codelist\n\nA codelist is a named list of codes to be used in a study you can create a simple codelist as:\n\ncodes &lt;- list(codelist_name = c(252942L, 257581L, 313236L)) |&gt;\n  newCodelist()\ncodes\n\n\n- codelist_name (3 codes)\n\n\n\n\nA codelist object can contain multiple codelists:\n\ncodes &lt;- list(codelist_1 = c(252942L, 257581L, 313236L), codelist_2 = c(46269775L, 46269784L)) |&gt;\n  newCodelist()\ncodes\n\n\n- codelist_1 (3 codes)\n- codelist_2 (2 codes)"
+  },
+  {
+    "objectID": "github_basis.html#codelist-1",
+    "href": "github_basis.html#codelist-1",
+    "title": "GitHub Training",
+    "section": "Codelist",
+    "text": "Codelist\n\nYou can create a codelist using drug ingredients like:\n\ncodes &lt;- getDrugIngredientCodes(cdm = cdm, name = \"acetaminophen\", routeCategory = \"oral\", nameStyle = \"{concept_name}\")\ncodes\n\n\n- acetaminophen (18755 codes)"
+  },
+  {
+    "objectID": "github_basis.html#codelist-2",
+    "href": "github_basis.html#codelist-2",
+    "title": "GitHub Training",
+    "section": "Codelist",
+    "text": "Codelist\n\nYou can create a codelist from a text search:\n\ncandidates &lt;- getCandidateCodes(cdm = cdm, keywords = \"covid\")\ncodes &lt;- list(covid = candidates$concept_id) |&gt;\n  newCodelist()\ncodes\n\n\n- covid (29 codes)"
+  },
+  {
+    "objectID": "github_basis.html#codelist-3",
+    "href": "github_basis.html#codelist-3",
+    "title": "GitHub Training",
+    "section": "Codelist",
+    "text": "Codelist\nAs we have seen codelists are deterministic and do not depend on vocabularies, but they can be long and difficult to manage."
+  },
+  {
+    "objectID": "github_basis.html#export-codelist",
+    "href": "github_basis.html#export-codelist",
+    "title": "GitHub Training",
+    "section": "Export Codelist",
+    "text": "Export Codelist\n\nexportCodelist(x = codes, path = here(), type = \"csv\")\nexportCodelist(x = codes, path = here(), type = \"json\")"
+  },
+  {
+    "objectID": "github_basis.html#import-a-codelist-in-atlas",
+    "href": "github_basis.html#import-a-codelist-in-atlas",
+    "title": "GitHub Training",
+    "section": "Import a codelist in ATLAS",
+    "text": "Import a codelist in ATLAS\nReally?"
+  },
+  {
+    "objectID": "github_basis.html#import-a-codelist",
+    "href": "github_basis.html#import-a-codelist",
+    "title": "GitHub Training",
+    "section": "Import a codelist",
+    "text": "Import a codelist\n\ncodes &lt;- importCodelist(path = here(), type = \"csv\")\ncodes &lt;- importCodelist(path = here(), type = \"json\")\n\n\nIf you want to be friends use .csv"
+  },
+  {
+    "objectID": "github_basis.html#your-turn",
+    "href": "github_basis.html#your-turn",
+    "title": "GitHub Training",
+    "section": "Your turn",
+    "text": "Your turn\nGo to the repository that we were working: https://github.com/oxford-pharmacoepi/TestRepository\n\nMake sure you are in your branch\nMake sure your branch is updated from main\nAssign an issue (that starts with CODELIST STEP 1) to yourself\nCreate the codelist that you are asked to create\nSave it in the codelist folder\nCommit\nPush\nOpen a Pull Request (link the Pull Request to the issue)"
   },
   {
     "objectID": "github_basis.html#conceptsetexpression",
     "href": "github_basis.html#conceptsetexpression",
     "title": "GitHub Training",
     "section": "conceptSetExpression",
-    "text": "conceptSetExpression"
+    "text": "conceptSetExpression\nA concept_set_expression is a named list that contains an expression:\n\nconcept_id + logic (exclude and descendants)"
   },
   {
-    "objectID": "github_basis.html#export-and-import",
-    "href": "github_basis.html#export-and-import",
+    "objectID": "github_basis.html#conceptsetexpression-1",
+    "href": "github_basis.html#conceptsetexpression-1",
     "title": "GitHub Training",
-    "section": "Export and Import",
-    "text": "Export and Import"
+    "section": "conceptSetExpression",
+    "text": "conceptSetExpression\n\nWe do not provide any function to create concept_set_expression, but they can easily be created as a list of tibbles.\n\n\n\ncse &lt;- list(concept_name = tibble(\n  concept_id = c(317009L, 257581L),\n  descendants = c(TRUE, TRUE),\n  excluded = c(FALSE, TRUE),\n  mapped = c(TRUE, TRUE)\n)) |&gt;\n  newConceptSetExpression()\ncse\n\n\n- concept_name (2 concept criteria)"
   },
   {
-    "objectID": "github_basis.html#json-and-csv",
-    "href": "github_basis.html#json-and-csv",
+    "objectID": "github_basis.html#your-turn-1",
+    "href": "github_basis.html#your-turn-1",
     "title": "GitHub Training",
-    "section": "json and csv",
-    "text": "json and csv"
+    "section": "Your turn",
+    "text": "Your turn\nGo to the repository that we were working: https://github.com/oxford-pharmacoepi/TestRepository\n\nMake sure you are in your branch\nMake sure your branch is updated from main\nAssign an issue (that starts with CONCEPT SET EXPRESSION STEP 2) to yourself\nGo to ATLAS create the concept set expression\nExport the json file from ATLAS and save it locally (copy paste)\nImport the json file\nSave the csv file\nDelete the json file\nSave it in the conceptsets folder\nCommit\nPush\nOpen a Pull Request (link the Pull Request to the issue)\nAsk for a review"
+  },
+  {
+    "objectID": "github_basis.html#lets-review",
+    "href": "github_basis.html#lets-review",
+    "title": "GitHub Training",
+    "section": "Let’s review",
+    "text": "Let’s review\n\nLive demo"
+  },
+  {
+    "objectID": "github_basis.html#your-turn-2",
+    "href": "github_basis.html#your-turn-2",
+    "title": "GitHub Training",
+    "section": "Your turn",
+    "text": "Your turn\n\nProvide a review (ask sth random):\n\nTo add another concept\nTo change one of the logic\nTo change the name of the concept set expression"
+  },
+  {
+    "objectID": "github_basis.html#your-turn-3",
+    "href": "github_basis.html#your-turn-3",
+    "title": "GitHub Training",
+    "section": "Your turn",
+    "text": "Your turn\n\nDo it yourself!\nWhatever you asked in the review do it\nChange the branch to the one your colleague was in\nEdit the concept set with whatever random request you came with\nCommit\nPush\nAsk for the review to the original author"
   },
   {
     "objectID": "github_basis.html#from-codelist-to-conceptsetexpression",
     "href": "github_basis.html#from-codelist-to-conceptsetexpression",
     "title": "GitHub Training",
     "section": "From codelist to conceptSetExpression",
-    "text": "From codelist to conceptSetExpression"
+    "text": "From codelist to conceptSetExpression\nYou can easily convert a codelist to a concept_set_expression:\n\n\ncodes\n\n\n- covid (29 codes)\n\nnewConceptSetExpression(codes)\n\n\n- covid (29 concept criteria)\n\nexportConceptSetExpression(codes, path = here(), type = \"csv\")"
   },
   {
     "objectID": "github_basis.html#from-conceptsetexpression-to-codelist",
     "href": "github_basis.html#from-conceptsetexpression-to-codelist",
     "title": "GitHub Training",
     "section": "From conceptSetExpression to codelist",
-    "text": "From conceptSetExpression to codelist"
+    "text": "From conceptSetExpression to codelist\nTo do that you will need a cdm object to get the descendants and then use the validateConceptSetArgument() function:\n\ncse\n\n\n- concept_name (2 concept criteria)\n\ncodelist &lt;- validateConceptSetArgument(conceptSet = cse, cdm = cdm)\ncodelist\n\n\n- concept_name (83 codes)"
+  },
+  {
+    "objectID": "github_basis.html#your-turn-4",
+    "href": "github_basis.html#your-turn-4",
+    "title": "GitHub Training",
+    "section": "Your turn",
+    "text": "Your turn\n\nMake sure you are in your branch\nMake sure your branch is updated from main\nAssign an issue (that starts with CONVERT STEP 3) to yourself\nGet the concept set expression\nConvert it into a codelist\nSave it in the codelist folder\nCommit\nPush\nPull Request"
+  },
+  {
+    "objectID": "github_basis.html#you-are-ready",
+    "href": "github_basis.html#you-are-ready",
+    "title": "GitHub Training",
+    "section": "You are ready",
+    "text": "You are ready"
   }
 ]
