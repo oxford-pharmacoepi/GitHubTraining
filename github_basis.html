@@ -584,8 +584,10 @@
 <li class="fragment">Make sure you have the latest version of the neede packages:</li>
 </ol>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"pak"</span>)</span>
-<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pkg_install</span>(<span class="fu">c</span>(<span class="st">"omopgenerics"</span>, <span class="st">"CodelistGenerator"</span>, <span class="st">"CDMConnector"</span>, <span class="st">"ohdsi/omock"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"pak"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pkg_install</span>(<span class="fu">c</span>(<span class="st">"omopgenerics"</span>, <span class="st">"CodelistGenerator"</span>, <span class="st">"CDMConnector"</span>, <span class="st">"ohdsi/omock"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <ol start="2" type="1">
@@ -598,16 +600,16 @@
 <li class="fragment"><p>Check that the environment variable is correctly set up</p></li>
 </ol>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.getenv</span>(<span class="st">"OMOP_DATA_FOLDER"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.getenv</span>(<span class="st">"OMOP_DATA_FOLDER"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ol start="5" type="1">
 <li class="fragment">Create a cdm reference:</li>
 </ol>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(omock)</span>
-<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(duckdb)</span>
-<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>cdm <span class="ot">&lt;-</span> <span class="fu">mockCdmFromDataset</span>(<span class="at">datasetName =</span> <span class="st">"empty_cdm"</span>, <span class="at">source =</span> <span class="st">"duckdb"</span>)</span>
-<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a>cdm</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(omock)</span>
+<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(duckdb)</span>
+<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a>cdm <span class="ot">&lt;-</span> <span class="fu">mockCdmFromDataset</span>(<span class="at">datasetName =</span> <span class="st">"empty_cdm"</span>, <span class="at">source =</span> <span class="st">"duckdb"</span>)</span>
+<span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a>cdm</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
@@ -615,10 +617,10 @@
 <h2>CodelistGenerator</h2>
 <p>To deal with <em>codelist</em> and <em>concept_set_expression</em> objects we will use the <strong>CodelistGenerator</strong> package:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(CodelistGenerator)</span>
-<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tibble)</span>
-<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
-<span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(omopgenerics)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(CodelistGenerator)</span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tibble)</span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(omopgenerics)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="codelist" class="slide level2">
@@ -626,9 +628,9 @@
 <div class="fragment">
 <p>A codelist is a named list of codes to be used in a study you can create a simple codelist as:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a>codes <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">codelist_name =</span> <span class="fu">c</span>(<span class="dv">252942</span>L, <span class="dv">257581</span>L, <span class="dv">313236</span>L)) <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">newCodelist</span>()</span>
-<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a>codes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>codes <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">codelist_name =</span> <span class="fu">c</span>(<span class="dv">252942</span>L, <span class="dv">257581</span>L, <span class="dv">313236</span>L)) <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">newCodelist</span>()</span>
+<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>codes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 - codelist_name (3 codes)</code></pre>
@@ -638,9 +640,9 @@
 <div class="fragment">
 <p>A <code>codelist</code> object can contain multiple codelists:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a>codes <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">codelist_1 =</span> <span class="fu">c</span>(<span class="dv">252942</span>L, <span class="dv">257581</span>L, <span class="dv">313236</span>L), <span class="at">codelist_2 =</span> <span class="fu">c</span>(<span class="dv">46269775</span>L, <span class="dv">46269784</span>L)) <span class="sc">|&gt;</span></span>
-<span id="cb8-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">newCodelist</span>()</span>
-<span id="cb8-3"><a aria-hidden="true" tabindex="-1"></a>codes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a>codes <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">codelist_1 =</span> <span class="fu">c</span>(<span class="dv">252942</span>L, <span class="dv">257581</span>L, <span class="dv">313236</span>L), <span class="at">codelist_2 =</span> <span class="fu">c</span>(<span class="dv">46269775</span>L, <span class="dv">46269784</span>L)) <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">newCodelist</span>()</span>
+<span id="cb9-3"><a aria-hidden="true" tabindex="-1"></a>codes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 - codelist_1 (3 codes)
@@ -654,8 +656,8 @@
 <div class="fragment">
 <p>You can create a codelist using drug ingredients like:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a>codes <span class="ot">&lt;-</span> <span class="fu">getDrugIngredientCodes</span>(<span class="at">cdm =</span> cdm, <span class="at">name =</span> <span class="st">"acetaminophen"</span>, <span class="at">routeCategory =</span> <span class="st">"oral"</span>, <span class="at">nameStyle =</span> <span class="st">"{concept_name}"</span>)</span>
-<span id="cb10-2"><a aria-hidden="true" tabindex="-1"></a>codes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a>codes <span class="ot">&lt;-</span> <span class="fu">getDrugIngredientCodes</span>(<span class="at">cdm =</span> cdm, <span class="at">name =</span> <span class="st">"acetaminophen"</span>, <span class="at">routeCategory =</span> <span class="st">"oral"</span>, <span class="at">nameStyle =</span> <span class="st">"{concept_name}"</span>)</span>
+<span id="cb11-2"><a aria-hidden="true" tabindex="-1"></a>codes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 - acetaminophen (18755 codes)</code></pre>
@@ -668,10 +670,10 @@
 <div class="fragment">
 <p>You can create a codelist from a text search:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a>candidates <span class="ot">&lt;-</span> <span class="fu">getCandidateCodes</span>(<span class="at">cdm =</span> cdm, <span class="at">keywords =</span> <span class="st">"covid"</span>)</span>
-<span id="cb12-2"><a aria-hidden="true" tabindex="-1"></a>codes <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">covid =</span> candidates<span class="sc">$</span>concept_id) <span class="sc">|&gt;</span></span>
-<span id="cb12-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">newCodelist</span>()</span>
-<span id="cb12-4"><a aria-hidden="true" tabindex="-1"></a>codes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a>candidates <span class="ot">&lt;-</span> <span class="fu">getCandidateCodes</span>(<span class="at">cdm =</span> cdm, <span class="at">keywords =</span> <span class="st">"covid"</span>)</span>
+<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a>codes <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">covid =</span> candidates<span class="sc">$</span>concept_id) <span class="sc">|&gt;</span></span>
+<span id="cb13-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">newCodelist</span>()</span>
+<span id="cb13-4"><a aria-hidden="true" tabindex="-1"></a>codes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 - covid (29 codes)</code></pre>
@@ -686,8 +688,8 @@
 <section id="export-codelist" class="slide level2">
 <h2>Export Codelist</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">exportCodelist</span>(<span class="at">x =</span> codes, <span class="at">path =</span> <span class="fu">here</span>(), <span class="at">type =</span> <span class="st">"csv"</span>)</span>
-<span id="cb14-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">exportCodelist</span>(<span class="at">x =</span> codes, <span class="at">path =</span> <span class="fu">here</span>(), <span class="at">type =</span> <span class="st">"json"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">exportCodelist</span>(<span class="at">x =</span> codes, <span class="at">path =</span> <span class="fu">here</span>(), <span class="at">type =</span> <span class="st">"csv"</span>)</span>
+<span id="cb15-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">exportCodelist</span>(<span class="at">x =</span> codes, <span class="at">path =</span> <span class="fu">here</span>(), <span class="at">type =</span> <span class="st">"json"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="import-a-codelist-in-atlas" class="slide level2">
@@ -697,8 +699,8 @@
 <section id="import-a-codelist" class="slide level2">
 <h2>Import a codelist</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a>codes <span class="ot">&lt;-</span> <span class="fu">importCodelist</span>(<span class="at">path =</span> <span class="fu">here</span>(), <span class="at">type =</span> <span class="st">"csv"</span>)</span>
-<span id="cb15-2"><a aria-hidden="true" tabindex="-1"></a>codes <span class="ot">&lt;-</span> <span class="fu">importCodelist</span>(<span class="at">path =</span> <span class="fu">here</span>(), <span class="at">type =</span> <span class="st">"json"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a>codes <span class="ot">&lt;-</span> <span class="fu">importCodelist</span>(<span class="at">path =</span> <span class="fu">here</span>(), <span class="at">type =</span> <span class="st">"csv"</span>)</span>
+<span id="cb16-2"><a aria-hidden="true" tabindex="-1"></a>codes <span class="ot">&lt;-</span> <span class="fu">importCodelist</span>(<span class="at">path =</span> <span class="fu">here</span>(), <span class="at">type =</span> <span class="st">"json"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <p><strong>If you want to be friends use <code>.csv</code></strong></p>
@@ -732,14 +734,14 @@
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a>cse <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">concept_name =</span> <span class="fu">tibble</span>(</span>
-<span id="cb16-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">concept_id =</span> <span class="fu">c</span>(<span class="dv">317009</span>L, <span class="dv">257581</span>L),</span>
-<span id="cb16-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">descendants =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>),</span>
-<span id="cb16-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">excluded =</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">TRUE</span>),</span>
-<span id="cb16-5"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">mapped =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>)</span>
-<span id="cb16-6"><a aria-hidden="true" tabindex="-1"></a>)) <span class="sc">|&gt;</span></span>
-<span id="cb16-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">newConceptSetExpression</span>()</span>
-<span id="cb16-8"><a aria-hidden="true" tabindex="-1"></a>cse</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a>cse <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">concept_name =</span> <span class="fu">tibble</span>(</span>
+<span id="cb17-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">concept_id =</span> <span class="fu">c</span>(<span class="dv">317009</span>L, <span class="dv">257581</span>L),</span>
+<span id="cb17-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">descendants =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>),</span>
+<span id="cb17-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">excluded =</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">TRUE</span>),</span>
+<span id="cb17-5"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">mapped =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>)</span>
+<span id="cb17-6"><a aria-hidden="true" tabindex="-1"></a>)) <span class="sc">|&gt;</span></span>
+<span id="cb17-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">newConceptSetExpression</span>()</span>
+<span id="cb17-8"><a aria-hidden="true" tabindex="-1"></a>cse</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 - concept_name (2 concept criteria)</code></pre>
@@ -800,17 +802,17 @@
 <p>You can easily convert a <code>codelist</code> to a <code>concept_set_expression</code>:</p>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a aria-hidden="true" tabindex="-1"></a>codes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a aria-hidden="true" tabindex="-1"></a>codes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 - covid (29 codes)</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">newConceptSetExpression</span>(codes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">newConceptSetExpression</span>(codes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 - covid (29 concept criteria)</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">exportConceptSetExpression</span>(codes, <span class="at">path =</span> <span class="fu">here</span>(), <span class="at">type =</span> <span class="st">"csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">exportConceptSetExpression</span>(codes, <span class="at">path =</span> <span class="fu">here</span>(), <span class="at">type =</span> <span class="st">"csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
@@ -818,13 +820,13 @@
 <h2>From conceptSetExpression to codelist</h2>
 <p>To do that you will need a cdm object to get the descendants and then use the <code>validateConceptSetArgument()</code> function:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a aria-hidden="true" tabindex="-1"></a>cse</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a aria-hidden="true" tabindex="-1"></a>cse</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 - concept_name (2 concept criteria)</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a aria-hidden="true" tabindex="-1"></a>codelist <span class="ot">&lt;-</span> <span class="fu">validateConceptSetArgument</span>(<span class="at">conceptSet =</span> cse, <span class="at">cdm =</span> cdm)</span>
-<span id="cb25-2"><a aria-hidden="true" tabindex="-1"></a>codelist</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a aria-hidden="true" tabindex="-1"></a>codelist <span class="ot">&lt;-</span> <span class="fu">validateConceptSetArgument</span>(<span class="at">conceptSet =</span> cse, <span class="at">cdm =</span> cdm)</span>
+<span id="cb26-2"><a aria-hidden="true" tabindex="-1"></a>codelist</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 - concept_name (83 codes)</code></pre>
