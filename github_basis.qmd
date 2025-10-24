@@ -317,7 +317,7 @@ Templates can be used to create new repositories:
 
 . . .
 
-1. Make sure you have the latest version of the needed packages:
+*1 Make sure you have the latest version of the needed packages:*
 
 ```{r, eval=FALSE}
 install.packages("pak")
@@ -328,21 +328,17 @@ pak::pkg_install(c("omopgenerics", "CodelistGenerator", "CDMConnector", "ohdsi/o
 
 . . .
 
-2. Set up your `OMOP_DATA_FOLDER`
+*2 Set up your `OMOP_DATA_FOLDER`:*
 
-Open your `.Renviron` file and write the following
-
+Open your `.Renviron` (`usethis::edit_r_environ()`) file and write the following:
 ```
 OMOP_DATA_FOLDER="path/to/data"
 ```
-
-. . .
-
-3. Restart R
+Then restart R. 
 
 . . . 
 
-4. Check that the environment variable is correctly set up
+*3 Check that the environment variable is correctly set up:*
 
 ```{r, eval=FALSE}
 Sys.getenv("OMOP_DATA_FOLDER")
@@ -350,7 +346,7 @@ Sys.getenv("OMOP_DATA_FOLDER")
 
 . . .
 
-5. Create a cdm reference:
+*4 Create a cdm reference:*
 
 ```{r}
 library(omock)
