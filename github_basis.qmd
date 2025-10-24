@@ -317,8 +317,10 @@ Templates can be used to create new repositories:
 
 1. Make sure you have the latest version of the neede packages:
 
-```{r}
+```{r, eval=FALSE}
 install.packages("pak")
+```
+```{r}
 pak::pkg_install(c("omopgenerics", "CodelistGenerator", "CDMConnector", "ohdsi/omock"))
 ```
 
