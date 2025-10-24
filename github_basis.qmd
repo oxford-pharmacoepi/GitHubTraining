@@ -344,6 +344,7 @@ Sys.getenv("OMOP_DATA_FOLDER")
 
 ```{r}
 library(omock)
+library(duckdb)
 cdm <- mockCdmFromDataset(datasetName = "empty_cdm", source = "duckdb")
 cdm
 ```
@@ -355,6 +356,8 @@ To deal with *codelist* and *concept_set_expression* objects we will use the **C
 ```{r}
 library(CodelistGenerator)
 library(tibble)
+library(here)
+library(omopgenerics)
 ```
 
 ## Codelist
@@ -526,12 +529,58 @@ Go to the repository that we were working: <https://github.com/oxford-pharmacoep
 
 - Whatever you asked in the review **do it**
 
-- Change the brach to the one your collegue was in
+- Change the branch to the one your colleague was in
 
 - Edit the concept set with whatever random request you came with
 
+- Commit
+
+- Push
+
+- Ask for the review to the original author
+
 ## From codelist to conceptSetExpression
 
-You can easily convert a `codelist` to a `concept_set_expression`
+You can easily convert a `codelist` to a `concept_set_expression`:
+
+. . .
+
+```{r}
+codes
+newConceptSetExpression(codes)
+exportConceptSetExpression(codes, path = here(), type = "csv")
+```
 
 ## From conceptSetExpression to codelist
+
+To do that you will need a cdm object to get the descendants and then use the `validateConceptSetArgument()` function:
+
+```{r}
+cse
+codelist <- validateConceptSetArgument(conceptSet = cse, cdm = cdm)
+codelist
+```
+
+## Your turn
+
+- Make sure you are in **your branch**
+
+- Make sure **your branch** is updated from main
+
+- Assign an issue (that starts with **CONVERT STEP 3**) to yourself
+
+- Get the concept set expression
+
+- Convert it into a `codelist`
+
+- Save it in the `codelist` folder
+
+- Commit
+
+- Push
+
+- Pull Request
+
+## You are ready
+
+![](images/meme.png)
