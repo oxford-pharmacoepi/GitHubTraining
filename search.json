@@ -207,7 +207,7 @@
     "href": "github_basis.html#lets-get-started",
     "title": "GitHub Training",
     "section": "Let’s get started",
-    "text": "Let’s get started\n\nMake sure you have the latest version of the needed packages:\n\n\ninstall.packages(\"pak\")\n\n\npak::pkg_install(c(\"omopgenerics\", \"CodelistGenerator\", \"CDMConnector\", \"ohdsi/omock\"))\n\n\n\nSet up your OMOP_DATA_FOLDER\n\nOpen your .Renviron file and write the following\nOMOP_DATA_FOLDER=\"path/to/data\"\n\nRestart R\nCheck that the environment variable is correctly set up\n\n\nSys.getenv(\"OMOP_DATA_FOLDER\")\n\n\nCreate a cdm reference:\n\n\nlibrary(omock)\nlibrary(duckdb)\ncdm &lt;- mockCdmFromDataset(datasetName = \"empty_cdm\", source = \"duckdb\")\ncdm"
+    "text": "Let’s get started\n\n\nMake sure you have the latest version of the needed packages:\n\n\ninstall.packages(\"pak\")\n\n\npak::pkg_install(c(\"omopgenerics\", \"CodelistGenerator\", \"CDMConnector\", \"ohdsi/omock\"))\n\n\n\n\nSet up your OMOP_DATA_FOLDER\n\nOpen your .Renviron file and write the following\nOMOP_DATA_FOLDER=\"path/to/data\"\n\n\n\nRestart R\n\n\n\n\nCheck that the environment variable is correctly set up\n\n\nSys.getenv(\"OMOP_DATA_FOLDER\")\n\n\n\n\nCreate a cdm reference:\n\n\nlibrary(omock)\nlibrary(duckdb)\ncdm &lt;- mockCdmFromDataset(datasetName = \"empty_cdm\", source = \"duckdb\")\ncdm"
   },
   {
     "objectID": "github_basis.html#codelistgenerator",
@@ -291,7 +291,7 @@
     "href": "github_basis.html#your-turn-1",
     "title": "GitHub Training",
     "section": "Your turn",
-    "text": "Your turn\nGo to the repository that we were working: https://github.com/oxford-pharmacoepi/TestRepository\n\nMake sure you are in your branch\nMake sure your branch is updated from main\nAssign an issue (that starts with CONCEPT SET EXPRESSION STEP 2) to yourself\nGo to ATLAS create the concept set expression\nExport the json file from ATLAS and save it locally (copy paste)\nImport the json file\nSave the csv file\nDelete the json file\nSave it in the conceptsets folder\nCommit\nPush\nOpen a Pull Request (link the Pull Request to the issue)\nAsk for a review"
+    "text": "Your turn\n\nGo to the repository that we were working: https://github.com/oxford-pharmacoepi/TestRepository\n\nMake sure you are in your branch\nMake sure your branch is updated from main\nAssign an issue (that starts with CONCEPT SET EXPRESSION STEP 2) to yourself\nGo to ATLAS create the concept set expression\nExport the json file from ATLAS and save it locally (copy paste)\nImport the json file\nSave the csv file\nDelete the json file\nSave it in the conceptsets folder\nCommit\nPush\nOpen a Pull Request (link the Pull Request to the issue)\nAsk for a review"
   },
   {
     "objectID": "github_basis.html#lets-review",
@@ -305,7 +305,7 @@
     "href": "github_basis.html#your-turn-2",
     "title": "GitHub Training",
     "section": "Your turn",
-    "text": "Your turn\n\nProvide a review (ask sth random):\n\nTo add another concept\nTo change one of the logic\nTo change the name of the concept set expression"
+    "text": "Your turn\n\nProvide a review (ask something random):\n\nTo add another concept\nTo change one of the logic\nTo change the name of the concept set expression"
   },
   {
     "objectID": "github_basis.html#your-turn-3",

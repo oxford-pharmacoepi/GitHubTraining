@@ -580,6 +580,7 @@
 </section>
 <section id="lets-get-started" class="slide level2">
 <h2>Let’s get started</h2>
+<div class="fragment">
 <ol type="1">
 <li class="fragment">Make sure you have the latest version of the needed packages:</li>
 </ol>
@@ -589,19 +590,28 @@
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pkg_install</span>(<span class="fu">c</span>(<span class="st">"omopgenerics"</span>, <span class="st">"CodelistGenerator"</span>, <span class="st">"CDMConnector"</span>, <span class="st">"ohdsi/omock"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</div>
 <div class="fragment">
 <ol start="2" type="1">
 <li class="fragment">Set up your <code>OMOP_DATA_FOLDER</code></li>
 </ol>
 <p>Open your <code>.Renviron</code> file and write the following</p>
 <pre><code>OMOP_DATA_FOLDER="path/to/data"</code></pre>
+</div>
+<div class="fragment">
 <ol start="3" type="1">
-<li class="fragment"><p>Restart R</p></li>
-<li class="fragment"><p>Check that the environment variable is correctly set up</p></li>
+<li class="fragment">Restart R</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="4" type="1">
+<li class="fragment">Check that the environment variable is correctly set up</li>
 </ol>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.getenv</span>(<span class="st">"OMOP_DATA_FOLDER"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</div>
+<div class="fragment">
 <ol start="5" type="1">
 <li class="fragment">Create a cdm reference:</li>
 </ol>
@@ -751,6 +761,7 @@
 </section>
 <section id="your-turn-1" class="slide level2">
 <h2>Your turn</h2>
+<div class="small-text">
 <p>Go to the repository that we were working: <a href="https://github.com/oxford-pharmacoepi/TestRepository" class="uri">https://github.com/oxford-pharmacoepi/TestRepository</a></p>
 <ul>
 <li class="fragment"><p>Make sure you are in <strong>your branch</strong></p></li>
@@ -767,6 +778,7 @@
 <li class="fragment"><p>Open a Pull Request (link the Pull Request to the issue)</p></li>
 <li class="fragment"><p>Ask for a review</p></li>
 </ul>
+</div>
 </section>
 <section id="lets-review" class="slide level2">
 <h2>Let’s review</h2>
@@ -777,7 +789,7 @@
 <section id="your-turn-2" class="slide level2">
 <h2>Your turn</h2>
 <ul>
-<li class="fragment"><p>Provide a review (ask sth random):</p>
+<li class="fragment"><p>Provide a review (ask something random):</p>
 <ul>
 <li class="fragment">To add another concept</li>
 <li class="fragment">To change one of the logic</li>
@@ -849,10 +861,16 @@
 </section>
 <section id="you-are-ready" class="slide level2">
 <h2>You are ready</h2>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/meme.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
 
 
-
-<img data-src="images/meme.png" class="r-stretch"></section></section>
+</div>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
