@@ -315,6 +315,8 @@ Templates can be used to create new repositories:
 
 ## Let's get started
 
+. . .
+
 1. Make sure you have the latest version of the needed packages:
 
 ```{r, eval=FALSE}
@@ -334,13 +336,19 @@ Open your `.Renviron` file and write the following
 OMOP_DATA_FOLDER="path/to/data"
 ```
 
+. . .
+
 3. Restart R
+
+. . . 
 
 4. Check that the environment variable is correctly set up
 
 ```{r, eval=FALSE}
 Sys.getenv("OMOP_DATA_FOLDER")
 ```
+
+. . .
 
 5. Create a cdm reference:
 
@@ -483,6 +491,7 @@ cse
 
 ## Your turn
 
+::: {.small-text}
 Go to the repository that we were working: <https://github.com/oxford-pharmacoepi/TestRepository>
 
 - Make sure you are in **your branch**
@@ -510,6 +519,7 @@ Go to the repository that we were working: <https://github.com/oxford-pharmacoep
 - Open a Pull Request (link the Pull Request to the issue)
 
 - Ask for a review
+:::
 
 ## Let's review
 
@@ -519,7 +529,7 @@ Go to the repository that we were working: <https://github.com/oxford-pharmacoep
 
 ## Your turn
 
-- Provide a review (ask sth random):
+- Provide a review (ask something random):
 
   - To add another concept
   - To change one of the logic
@@ -585,4 +595,6 @@ codelist
 
 ## You are ready
 
-![](images/meme.png)
+. . .
+
+![](images/meme.png){fig-align="center"}
